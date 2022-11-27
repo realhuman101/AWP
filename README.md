@@ -1,5 +1,7 @@
 # AFFP - Automated Forest Fire Prediction
-This project's goal is to automatically predict forest fires based on data collected from sensors measuring temperature, humidity, etc.
+This project's goal is to automatically predict forest fires based on data collected from sensors measuring temperature, humidity, etc.  
+
+This project is part of the [AIoT Engineering & Entrepreneurial Skills Education for Gifted Students programme](https://cityueegef.github.io/about/).
 
 ## Table of Contents
 - [Usage](#usage)
