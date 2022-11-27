@@ -1,6 +1,9 @@
 # AFFP - Automated Forest Fire Prediction
 This project's goal is to automatically predict forest fires based on data collected from sensors measuring temperature, humidity, etc.
 
+## Table of Contents
+- [Usage](#usage)
+
 ## Usage
 Before you run any code, please first install all the required packages by running the following command:
 ```
