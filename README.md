@@ -1,5 +1,5 @@
 # AFFP - Automated Forest Fire Prediction
-> **NOTE:** Please note that this project is still in the planning stage. The project is not yet ready for use. If you wish to see our planning and project proposal, feel free to visit the planning branch [here](https://github.com/realhuman101/AFFP/tree/planning).
+> **NOTE:** Please note that this project is still in the planning stage. The project is not yet ready for use. If you wish to see our planning and project proposal, feel free to take a look at our project documents [here](/Project_Documents/).
 
 This project's goal is to automatically predict forest fires based on data collected from sensors measuring temperature, humidity, etc.  
 
