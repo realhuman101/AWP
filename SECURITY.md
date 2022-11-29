@@ -1,2 +1,2 @@
 # Security Policy 
-There is currently no existing security policy due to the fact that this project has not yet been completed, and its code has not yet been released
+If you notice a large security vulnerability, please contact one of the [authors](https://github.com/realhuman101/AFFP/blob/main/AUTHORS) via email and create a new issue immediately.
