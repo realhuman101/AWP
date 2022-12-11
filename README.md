@@ -1,19 +1,66 @@
 # AFFP - Automated Forest Fire Prediction
-> **NOTE:** Please note that this project is still in the planning stage. The project is not yet ready for use. If you wish to see our planning and project proposal, feel free to take a look at our project documents [here](/Project_Documents/).
 
-This project's goal is to automatically predict forest fires based on data collected from sensors measuring temperature, humidity, etc.  
+> **NOTE:** This project is currently in development and is not ready for use.
+
+This project uses AI in Python and Tensorflow to detect and predict forest fires. Early detection of forest fires can help prevent them from spreading and causing significant damage to the environment.
 
 This project is part of the [AIoT Engineering & Entrepreneurial Skills Education for Gifted Students programme](https://cityueegef.github.io/about/).
 
 ## Table of Contents
-- [Usage](#usage)
 
-## Usage
-Before you run any code, please first install all the required packages by running the following command:
-```
+- [AFFP - Automated Forest Fire Prediction](#affp---automated-forest-fire-prediction)
+  - [Table of Contents](#table-of-contents)
+  - [Requirements](#requirements)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Contributing](#contributing)
+  - [License](#license)
+  - [Credits](#credits)
+  - [Contact](#contact)
+
+## Requirements
+
+- Python 3.5 or higher
+- Tensorflow 2.10 or higher
+
+## Installation
+
+To install the required packages, run the following command:
+
+```py
 pip install -r requirements.txt
 ```
-Or, based on your OS, you can run the following command:
-```
+
+Or, depending on your OS:
+
+```py
 pip3 install -r requirements.txt
 ```
+
+## Usage
+
+Currently, the project is not completed so it is not ready for use.
+
+## Contributing
+
+If you want to contribute to this project, please follow the guidelines below:
+
+1. Fork the repository
+2. Create a new branch for your changes
+3. Make your changes and commit them
+4. Push the new branch to your fork
+5. Submit a pull request
+
+## License
+
+This project is licensed under the GPL v3 license. See our [LICENSE](LICENSE) for more information.
+
+## Credits
+
+- [Valentina Banner](https://github.com/realhuman101) - *Co-creator*
+- [Alicia Yuen](https://github.com/Alicia1234567891) - *Co-creator*
+- [Maya Yan](https://github.com/mayahkg) - *Co-creator*
+
+## Contact
+
+- GitHub: [@realhuman101](https://github.com/realhuman101)
