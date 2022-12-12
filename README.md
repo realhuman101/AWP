@@ -35,7 +35,7 @@ To install the required packages, run the following command:
 pip install -r requirements.txt
 ```
 
-Or, depending on your OS:
+Or, depending on your installation:
 
 ```py
 pip3 install -r requirements.txt
