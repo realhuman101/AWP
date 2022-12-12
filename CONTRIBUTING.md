@@ -1,6 +1,7 @@
 # Contributing to this project
-Thank you for taking the time to contribute to this project! 
-We appreciate your help and welcome any contributions you make. 
+
+Thank you for taking the time to contribute to this project!
+We appreciate your help and welcome any contributions you make.
 
 When contributing, please follow the guidelines:
 
