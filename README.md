@@ -1,19 +1,16 @@
 # <div align="center">AFFP - Automated Forest Fire Prediction</div>
+
 <div align="center"><i>AI for a safer, and greener future</i></div>
 
 ***
 
 > **NOTE:** This project is currently in development and is not ready for use.
 
-This project uses AI in Python and Tensorflow to detect and predict forest fires.  
-By detecting forest fires earlier, we can prevent them from spreading and heavily damaging the environment.
-
-This project is part of the [AIoT Engineering & Entrepreneurial Skills Education for Gifted Students programme](https://cityueegef.github.io/about/).
-
 ## Table of Contents
 
 - [AFFP - Automated Forest Fire Prediction](#affp---automated-forest-fire-prediction)
   - [Table of Contents](#table-of-contents)
+  - [Introduction](#introduction)
   - [Requirements](#requirements)
   - [Installation](#installation)
   - [Usage](#usage)
@@ -21,6 +18,12 @@ This project is part of the [AIoT Engineering & Entrepreneurial Skills Education
   - [License](#license)
   - [Credits](#credits)
   - [Contact](#contact)
+
+## Introduction
+
+AFFP (Automated Forest Fire Prediction) is a Python-based project that uses machine learning and Tensorflow to predict and prevent forest fires. By analyzing a dataset of historical forest fire data, AFFP is able to identify patterns and trends that can help forecast the likelihood of future fires in a given area. This information can be used to take proactive measures to prevent fires from starting or spreading, and to help emergency responders better allocate their resources.
+
+This project is part of the [AIoT Engineering & Entrepreneurial Skills Education for Gifted Students programme](https://cityueegef.github.io/about/).
 
 ## Requirements
 
