@@ -22,29 +22,30 @@ To track the progress of a bug, follow these steps:
 To make it easier to report bugs, you can use the following template:
 
 ```md
-# Description
+**Describe the bug**
+A clear and concise description of what the bug is.
 
-Describe the problem in a few sentences.
+**To Reproduce**
+Steps to reproduce the behavior:
 
-## Steps to Reproduce
+1. Go to '...'
+2. Click on '....'
+3. Scroll down to '....'
+4. See error
 
-1. Step 1
-2. Step 2
-3. Step 3
+**Expected behavior**
+A clear and concise description of what you expected to happen.
 
-## Expected Behavior
+**Screenshots**
+If applicable, add screenshots to help explain your problem.
 
-Describe what you expected to happen.
+**Desktop (please complete the following information):**
 
-## Actual Behavior
+- OS: [e.g. iOS]
+- Version [e.g. 22]
+- Python Version [e.g. 3.8.5]
+- Library Versions [e.g. numpy 1.19.2, pandas 1.1.3]
 
-Describe what actually happened.
-
-## Additional Information
-
-- OS and version:
-- Software version:
-- Python version:
-- Tensorflow version:
-- Any relevant error messages or screenshots:
+**Additional context**
+Add any other context about the problem here.
 ```
