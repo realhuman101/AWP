@@ -43,7 +43,7 @@ pip3 install -r requirements.txt
 
 ## Usage
 
-Currently, the project is not completed so it is not ready for use.
+Project is still **in development** and is therefore unavailable for use
 
 ## Contributing
 
