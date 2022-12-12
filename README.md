@@ -18,6 +18,7 @@
   - [License](#license)
   - [Credits](#credits)
   - [Contact](#contact)
+  - [Acknowledgments](#acknowledgments)
 
 ## Introduction
 
@@ -71,3 +72,14 @@ This project is licensed under the GPL v3 license. See our [LICENSE](LICENSE) fo
 ## Contact
 
 - GitHub: [@realhuman101](https://github.com/realhuman101)
+
+## Acknowledgments
+
+We would like to thank the following people and organizations for their support and contributions to this project:
+
+- [Valentina Banner](https://realhuman101.github.io/) for contributing code and ideas.
+- [Alicia Yuen](https://github.com/Alicia1234567891) for contributing code and ideas.
+- [Maya Yan](https://github.com/mayahkg) for contributing code and ideas.
+- [CityU EE GEF](https://cityueegef.github.io/) for providing funding, opportunities and resources.
+
+We are grateful for the support of our community and for the contributions of everyone who has helped make this project what it is.
