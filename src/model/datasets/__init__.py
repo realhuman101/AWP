@@ -12,4 +12,24 @@
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 # ======================================================================
 
-from .datasets import *
+import pandas as pd
+import os
+
+# Reading the CSV files into Dataframes
+training_data: pd.DataFrame = pd.read_csv(
+											os.path.join(
+												os.path.dirname(__file__), 
+												"Training_Data.csv"
+											)
+										)
+
+testing_data: pd.DataFrame = pd.read_csv(
+											os.path.join(
+												os.path.dirname(__file__), 
+												"Testing_Data.csv"
+											)
+										)
+
+# Stripping whitespaces from all the datasets
+training_data.applymap(lambda x: x.strip() if isinstance(x, str) else x)
+testing_data.applymap(lambda x: x.strip() if isinstance(x, str) else x)
