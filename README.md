@@ -91,6 +91,7 @@ This project is licensed under the GPL v3 license. See our [LICENSE](LICENSE) fo
 ## Contact
 
 - GitHub: [@realhuman101](https://github.com/realhuman101)
+- Email: valentinavbanner@gmail.com
 
 ## Acknowledgments
 
