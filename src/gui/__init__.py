@@ -16,4 +16,5 @@ import tkinter as tk
 
 def start() -> None:
 	window = tk.Tk()
+	window.title('AFFP')
 	window.mainloop()
