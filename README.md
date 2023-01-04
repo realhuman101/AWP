@@ -14,6 +14,7 @@
   - [Requirements](#requirements)
   - [Installation](#installation)
   - [Usage](#usage)
+  - [Datasets](#datasets)
   - [Contributing](#contributing)
   - [License](#license)
   - [Credits](#credits)
@@ -48,6 +49,24 @@ pip3 install -r requirements.txt
 ## Usage
 
 Project is still **in development** and is therefore unavailable for use.
+
+## Datasets
+
+> *See official citation [here](src/model/datasets/README.md)*
+
+- Our [training dataset](src/model/datasets/Training_Data.csv). ***Citation:***
+  - Available at: [UCI Machine Learning Repository - Forest Fires Data Set](http://archive.ics.uci.edu/ml/datasets/Forest+Fires)
+  - Source:
+    - Paulo Cortez, pcortez@dsi.uminho.pt, Department of Information Systems, University of Minho, Portugal.
+    - Aníbal Morais, araimorais@gmail.com, Department of Information Systems, University of Minho, Portugal.
+  - Relevant Paper:
+    - [http://www3.dsi.uminho.pt/pcortez/fires.pdf](http://www3.dsi.uminho.pt/pcortez/fires.pdf)
+- Our [testing dataset](src/model/datasets/Testing_Data.csv). ***Citation:***
+  - Available at: [UCI Machine Learning Repository - Algerian Forest Fires Dataset](https://archive.ics.uci.edu/ml/datasets/Algerian+Forest+Fires+Dataset++#)
+  - Source:
+    - Faroudja ABID, fabid@cdta.dz, abidfaroudja@gmail.com, Microelectronic & Nanotechnology Division, Center for Development of Advanced Technologies (CDTA).
+  - Relevant Paper:
+    - Faroudja ABID et al., Predicting Forest Fire in Algeria using Data Mining Techniques: Case Study of the Decision Tree Algorithm, International Conference on Advanced Intelligent Systems for Sustainable Development (AI2SD 2019) , 08 - 11 July, 2019, Marrakech, Morocco.
 
 ## Contributing
 
