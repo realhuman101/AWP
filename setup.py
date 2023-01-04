@@ -48,7 +48,7 @@ setuptools.setup(
 	packages = setuptools.find_packages('src'),	
     include_package_data = True,
     python_requires = '>=3.10.0',
-	license_file = 'LICENSE',
+	license_files = ('LICENSE', 'COPYING'),
 	license = 'GPL v3',
 	install_requires = [
         "tensorflow>=2.10.1",
