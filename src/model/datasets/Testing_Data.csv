@@ -120,10 +120,7 @@ day,month,year,Temperature,RH,Ws,Rain,FFMC,DMC,DC,ISI,BUI,FWI,Classes
 27,09,2012,31,66,11,0,85.7,8.3,24.9,4,9,4.1,fire   
 28,09,2012,32,47,14,0.7,77.5,7.1,8.8,1.8,6.8,0.9,not fire   
 29,09,2012,26,80,16,1.8,47.4,2.9,7.7,0.3,3,0.1,not fire   
-30,09,2012,25,78,14,1.4,45,1.9,7.5,0.2,2.4,0.1,not fire   
-
-Sidi-Bel Abbes Region Dataset
-day,month,year,Temperature, RH, Ws,Rain ,FFMC,DMC,DC,ISI,BUI,FWI,Classes  
+30,09,2012,25,78,14,1.4,45,1.9,7.5,0.2,2.4,0.1,not fire
 01,06,2012,32,71,12,0.7,57.1,2.5,8.2,0.6,2.8,0.2,not fire   
 02,06,2012,30,73,13,4,55.7,2.7,7.8,0.6,2.9,0.2,not fire   
 03,06,2012,29,80,14,2,48.7,2.2,7.6,0.3,2.6,0.1,not fire   
