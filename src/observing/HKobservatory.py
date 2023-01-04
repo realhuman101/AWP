@@ -13,3 +13,20 @@
 # ======================================================================
 
 import requests
+import json
+
+# CURRENT DATA
+
+class currentWeather:
+	def __init__(self) -> None:
+		url = 'https://data.weather.gov.hk/weatherAPI/opendata/weather.php?dataType=rhrread&lang=en'
+		response = requests.get(url)
+		data = json.loads(response.json())
+
+# FUTURE DATA
+
+class futureWeather:
+	def __init__(self) -> None:
+		url = 'https://data.weather.gov.hk/weatherAPI/opendata/weather.php?dataType=fnd&lang=en'
+		response = requests.get(url)
+		data = json.loads(response.json())
