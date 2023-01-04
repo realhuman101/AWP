@@ -44,7 +44,8 @@ setuptools.setup(
 	long_description_content_type = 'text/markdown',
 	keywords = 'AI ML NeuralNetwork fire forest environment tensorflow tkinter',
 	url = 'https://github.com/realhuman101/AFFP',
-	packages = ['src', 'src.gui'],
+	package_dir = {'': 'src'},
+	packages = setuptools.find_packages('src'),	
     include_package_data = True,
     python_requires = '>=3.10.0',
 	license_file = 'LICENSE',
@@ -57,7 +58,7 @@ setuptools.setup(
     ],
 	entry_points = {
 		'gui_scripts': [
-			'AFFP = src.gui:start'
+			'AFFP = gui:start'
 		]
 	}
 )
