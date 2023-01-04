@@ -13,6 +13,19 @@
 # ======================================================================
 
 import setuptools
+import pkg_resources
+import sys
+
+try:
+    if int(pkg_resources.get_distribution("pip").version.split('.')[0]) < 9:
+        print('Sorry, pip versions older than 9.0 are not supported, please upgrade pip with "pip install -U pip"')
+        sys.exit(-1)
+except pkg_resources.DistributionNotFound:
+    pass
+
+if tuple(sys.version_info)[:2] < (3,10):
+    print('Sorry, Python versions older 3.10 are not supported, please install a later version of Python')
+    sys.exit(-1)
 
 def readme() -> str:
     try:
@@ -31,7 +44,7 @@ setuptools.setup(
 	long_description_content_type = 'text/markdown',
 	keywords = 'AI ML NeuralNetwork fire forest environment tensorflow tkinter',
 	url = 'https://github.com/realhuman101/AFFP',
-	packages = ['src'],
+	packages = ['src', 'src.gui'],
     include_package_data = True,
     python_requires = '>=3.10.0',
 	license_file = 'LICENSE',
