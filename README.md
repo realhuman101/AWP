@@ -28,7 +28,7 @@ This project is part of the [AIoT Engineering & Entrepreneurial Skills Education
 
 ## Requirements
 
-- Python 3.5 or higher
+- Python 3.10 or higher
 - Tensorflow 2.10 or higher
 
 ## Installation
