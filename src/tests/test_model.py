@@ -14,7 +14,7 @@
 
 import pandas as pd
 
-from src.model import datasets 
+from ..model import datasets 
 
 def test_dataset() -> None:
     testing_data: pd.DataFrame = datasets.testing_data
