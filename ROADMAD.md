@@ -1,6 +1,6 @@
 # Roadmap
 
-This roadmap outlines the planned future developments for the project. It is a living document that will be updated as new plans are made and priorities change.
+This roadmap outlines the planned future developments for the project. It is a live document that will be updated as new plans are made and priorities change.
 
 ## Next Release
 
