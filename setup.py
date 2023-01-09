@@ -47,7 +47,7 @@ setuptools.setup(
 	package_dir = {'': 'src'},
 	packages = setuptools.find_packages('src'),	
     include_package_data = True,
-    python_requires = '>=3.10.0',
+    python_requires = '>=3.10.0, <=3.10.9',
 	license_files = ('LICENSE', 'COPYING'),
 	license = 'GPL v3',
 	install_requires = [
