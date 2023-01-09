@@ -12,5 +12,22 @@
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 # ======================================================================
 
-def test_base():
-    assert 'Hello, World!' == 'Hello, World!' # Base test
+import pandas as pd
+
+from ..model import datasets 
+
+def test_dataset() -> None:
+    testing_data: pd.DataFrame = datasets.testing_data
+    training_data: pd.DataFrame = datasets.training_data
+
+    # Check dataset types
+    assert isinstance(testing_data, pd.DataFrame)
+    assert isinstance(training_data, pd.DataFrame)
+
+    # Check no null
+    assert not testing_data.isnull().values.any()
+    assert not training_data.isnull().values.any()
+
+    # Check columns
+    assert list(testing_data.columns) == ['Temperature', 'RH', 'Ws', 'Rain', 'Classes']
+    assert list(training_data.columns) == ['temp', 'RH', 'wind', 'rain', 'area']
