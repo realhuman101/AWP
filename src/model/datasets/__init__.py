@@ -23,9 +23,6 @@ training_data: pd.DataFrame = pd.read_csv(
 											)
 										)
 
-# Removing/Dropping useless columns for the training data
-training_data.drop(['X','Y','month','day','FFMC','DMC','DC','ISI',], axis=1)
-
 testing_data: pd.DataFrame = pd.read_csv(
 											os.path.join(
 												os.path.dirname(__file__), 
@@ -34,8 +31,9 @@ testing_data: pd.DataFrame = pd.read_csv(
 										)
 
 # Removing/Dropping useless columns for the testing data
-testing_data.drop(['year','month','day','FFMC','DMC','DC','ISI','BUI','FWI'], axis=1)
+testing_data = testing_data.drop(['year','month','day','FFMC','DMC','DC','ISI','BUI','FWI'], axis=1)
+training_data = training_data.drop(['X','Y','month','day','FFMC','DMC','DC','ISI',], axis=1)
 
-# Stripping whitespaces from all the datasets
+# Stripping whitespaces from all the data
 training_data.applymap(lambda x: x.strip() if isinstance(x, str) else x)
 testing_data.applymap(lambda x: x.strip() if isinstance(x, str) else x)
