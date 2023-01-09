@@ -30,3 +30,6 @@ jobs:
       - name: Test with pytest
         run: |
           pytest
+      - name: Install AFFP
+        run: |
+          python setup.py develop
