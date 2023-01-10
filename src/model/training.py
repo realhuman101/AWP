@@ -12,9 +12,15 @@
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 # ======================================================================
 
+# Importing the required libraries
 import tensorflow as tf
 import numpy as np
 import pandas as pd
 import os
 
 from .datasets import *
+
+
+# Loading in the data
+x = np.asarray(training_data['temp', 'RH', 'wind', 'rain'])
+y = np.asarray(training_data['area'])
