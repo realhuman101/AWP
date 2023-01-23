@@ -23,14 +23,18 @@ from keras import Model
 from .datasets import *
 
 # Loading in the training data
-x_train = np.asarray(training_data['temp', 'RH', 'wind', 'rain'])
-y_train = np.asarray(training_data['area'])
+x_train = np.asarray(training_data['temp'])
+y_train = np.asarray(training_data['RH'])
+z_train = np.asarray(training_data['wind'])
+l_train = np.asarray(training_data['rain'])
+
+v_train = np.asarray(training_data['area'])
 
 # define 4  sets of inputs
-inputA = x_train['temp'].shape[1]
-inputB = x_train['temp'].shape[1]
-inputC = x_train['temp'].shape[1]
-inputD = x_train['temp'].shape[1]
+inputA = x_train.shape[1]
+inputB = y_train.shape[1]
+inputC = z_train.shape[1]
+inputD = l_train.shape[1]
 
 # the first branch operates on the first input
 x = Dense(8, activation="relu")(inputA)
@@ -44,25 +48,25 @@ y = Dense(4, activation="relu")(y)
 y = Model(inputs=inputB, outputs=y)
 
 # the 3rd branch opreates on the second input
-y = Dense(64, activation="relu")(inputB)
-y = Dense(32, activation="relu")(y)
-y = Dense(4, activation="relu")(y)
-y = Model(inputs=inputC, outputs=y)
+z = Dense(64, activation="relu")(inputC)
+z = Dense(32, activation="relu")(z)
+z = Dense(4, activation="relu")(z)
+z = Model(inputs=inputC, outputs=z)
 
 # the 4th branch opreates on the second input
-y = Dense(64, activation="relu")(inputB)
-y = Dense(32, activation="relu")(y)
-y = Dense(4, activation="relu")(y)
-y = Model(inputs=inputD, outputs=y)
+l = Dense(64, activation="relu")(inputD)
+l = Dense(32, activation="relu")(l)
+l = Dense(4, activation="relu")(l)
+l = Model(inputs=inputD, outputs=l)
 
 # combine the output of the 4 branches
-combined = concatenate([x.output, y.output, z.output, t.output])
+combined = concatenate([x.output, y.output, z.output, l.output])
 
 # apply a FC layer and then a regression prediction on the
 # combined outputs
-z = Dense(2, activation="relu")(combined)
-z = Dense(1, activation="linear")(z)
+v = Dense(2, activation="relu")(combined)
+v = Dense(1, activation="linear")(v)
 
 # our model will accept the inputs of the 4 branches and
 # then output a single value
-model = Model(inputs=[x.input, y.input], outputs=z)
+model = Model(inputs=[x.output, y.output, z.output, l.output], outputs=vars)
