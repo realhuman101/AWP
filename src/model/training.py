@@ -34,3 +34,6 @@ y_train = np.asarray(training_data['area'].apply(lambda x: 1 if x > 0 else 0))
 
 # Obtaining the shape of the input data
 input_shape = x_train.shape[1:]
+
+# Define the input layer
+inputs = tf.keras.layers.Input(shape=input_shape)
