@@ -31,3 +31,6 @@ rain_train = np.asarray(training_data['rain'])
 # Obtaining the x_train and y_train data
 x_train = np.column_stack((temp_train, rh_train, wind_train, rain_train))
 y_train = np.asarray(training_data['area'].apply(lambda x: 1 if x > 0 else 0))
+
+# Obtaining the shape of the input data
+input_shape = x_train.shape[1:]
