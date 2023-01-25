@@ -20,7 +20,7 @@ import os
 from keras.models import Sequential
 from keras.layers import Input, Dense, Dropout, Flatten, Conv2D, MaxPooling2D
 from keras import Model
-from datasets import *
+from .datasets import *
 
 # Loading in the training data
 temp_train = np.asarray(training_data['temp'])
