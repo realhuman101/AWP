@@ -20,7 +20,7 @@ import os
 from keras.models import Sequential
 from keras.layers import Input, Dense, Dropout, Flatten, Conv2D, MaxPooling2D
 from keras import Model
-from .datasets import *
+from datasets import *
 
 # Loading in the training data
 temp_train = np.asarray(training_data['temp'])
@@ -58,3 +58,18 @@ model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy']
 
 # Train the model
 model.fit(x_train, y_train, epochs=10, batch_size=32, validation_split=0.2)
+
+# Obtaining testing data
+temp_test = np.asarray(testing_data['Temperature'])
+rh_test = np.asarray(testing_data['RH'])
+wind_test = np.asarray(testing_data['Ws'])
+rain_test = np.asarray(testing_data['Rain'])
+
+x_test = np.column_stack((temp_test, rh_test, wind_test, rain_test))
+y_test = np.asarray(testing_data['Classes'].apply(lambda x: 1 if x == 'fire' else 0))
+
+# Evaluate model
+test_loss, test_acc = model.evaluate(x_test, y_test, verbose=0) # Verbose = 0 for minimal output
+print('Test loss:', test_loss)
+print('Test accuracy:', test_acc)
+
