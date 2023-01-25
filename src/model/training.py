@@ -39,7 +39,7 @@ input_shape = x_train.shape[1:]
 inputs = tf.keras.layers.Input(shape=input_shape)
 
 # Define the first dense layer
-x = tf.keras.layers.Dense(32, activation='relu')(inputs)
+x = tf.keras.layers.Dense(32, activation='relu', kernel_regularizer='l1')(inputs)
 
 # Define the dropout layer
 x = tf.keras.layers.Dropout(0.2)(x)
