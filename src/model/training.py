@@ -67,4 +67,4 @@ v = Dense(2, activation="relu")(combined)
 v = Dense(1, activation="linear")(v)
 
 # The model will accept the inputs of the 4 branches and then output a single value
-model = Model(inputs=[x.output, y.output, z.output, l.output], outputs=vars)
+model = Model(inputs=[x.input, y.input, z.input, l.input], outputs=v)
