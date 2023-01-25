@@ -17,9 +17,9 @@ import tensorflow as tf
 import numpy as np
 import pandas as pd
 import os
-from keras.models import Sequential
-from keras.layers import Input, Dense, Dropout, Flatten, Conv2D, MaxPooling2D
-from keras import Model
+from keras.models import Model
+from keras.layers import Input, Dense, Dropout
+
 from .datasets import *
 
 # Loading in the training data
