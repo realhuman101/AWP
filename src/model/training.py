@@ -36,22 +36,22 @@ y_train = np.asarray(training_data['area'].apply(lambda x: 1 if x > 0 else 0))
 input_shape = x_train.shape[1:]
 
 # Define the input layer
-inputs = tf.keras.layers.Input(shape=input_shape)
+inputs = Input(shape=input_shape)
 
 # Define the first dense layer
-x = tf.keras.layers.Dense(32, activation='relu', kernel_regularizer='l1')(inputs)
+x = Dense(32, activation='relu', kernel_regularizer='l1')(inputs)
 
 # Define the dropout layer
-x = tf.keras.layers.Dropout(0.2)(x)
+x = Dropout(0.2)(x)
 
 # Define the second dense layer
-x = tf.keras.layers.Dense(16, activation='relu')(x)
+x = Dense(16, activation='relu')(x)
 
 # Define the output layer
-outputs = tf.keras.layers.Dense(1, activation='sigmoid')(x)
+outputs = Dense(1, activation='sigmoid')(x)
 
 # Create the model
-model = tf.keras.models.Model(inputs=inputs, outputs=outputs)
+model = Model(inputs=inputs, outputs=outputs)
 
 # Compile the model
 model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
