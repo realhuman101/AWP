@@ -20,7 +20,7 @@ import os
 from keras.models import Model
 from keras.layers import Input, Dense, Dropout
 
-from .datasets import *
+from datasets import *
 
 # Loading in the training data
 temp_train = np.asarray(training_data['temp'])
