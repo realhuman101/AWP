@@ -52,3 +52,9 @@ outputs = tf.keras.layers.Dense(1, activation='sigmoid')(x)
 
 # Create the model
 model = tf.keras.models.Model(inputs=inputs, outputs=outputs)
+
+# Compile the model
+model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
+
+# Train the model
+model.fit(x_train, y_train, epochs=10, batch_size=32, validation_split=0.2)
