@@ -18,53 +18,16 @@ import numpy as np
 import pandas as pd
 import os
 from keras.models import Sequential
-from keras.layers import Input, Dense, Dropout, Flatten, Conv2D, MaxPooling2D, concatenate
+from keras.layers import Input, Dense, Dropout, Flatten, Conv2D, MaxPooling2D
 from keras import Model
 from .datasets import *
 
 # Loading in the training data
-x_train = np.asarray(training_data['temp'])
-y_train = np.asarray(training_data['RH'])
-z_train = np.asarray(training_data['wind'])
-l_train = np.asarray(training_data['rain'])
+temp_train = np.asarray(training_data['temp'])
+rh_train = np.asarray(training_data['RH'])
+wind_train = np.asarray(training_data['wind'])
+rain_train = np.asarray(training_data['rain'])
 
-v_train = np.asarray(training_data['area'])
-
-# Set our input layers
-inputA = Input(shape=x_train.shape,)
-inputB = Input(shape=y_train.shape,)
-inputC = Input(shape=z_train.shape,)
-inputD = Input(shape=l_train.shape,)
-
-# The first branch operates on the first input
-x = Dense(8, activation="relu")(inputA)
-x = Dense(4, activation="relu")(x)
-x = Model(inputs=inputA, outputs=x)
-
-# The second branch operates on the second input
-y = Dense(64, activation="relu")(inputB)
-y = Dense(32, activation="relu")(y)
-y = Dense(4, activation="relu")(y)
-y = Model(inputs=inputB, outputs=y)
-
-# The 3rd branch operates on the second input
-z = Dense(64, activation="relu")(inputC)
-z = Dense(32, activation="relu")(z)
-z = Dense(4, activation="relu")(z)
-z = Model(inputs=inputC, outputs=z)
-
-# The 4th branch operates on the second input
-l = Dense(64, activation="relu")(inputD)
-l = Dense(32, activation="relu")(l)
-l = Dense(4, activation="relu")(l)
-l = Model(inputs=inputD, outputs=l)
-
-# Combine the output of the 4 branches
-combined = concatenate([x.output, y.output, z.output, l.output])
-
-# Apply a FC layer and then a regression prediction on the combined outputs
-v = Dense(2, activation="relu")(combined)
-v = Dense(1, activation="linear")(v)
-
-# The model will accept the inputs of the 4 branches and then output a single value
-model = Model(inputs=[x.input, y.input, z.input, l.input], outputs=v)
+# Obtaining the x_train and y_train data
+x_train = np.column_stack((temp_train, rh_train, wind_train, rain_train))
+y_train = np.asarray(training_data['area'].apply(lambda x: 1 if x > 0 else 0))
