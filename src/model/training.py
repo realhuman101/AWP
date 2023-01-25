@@ -18,7 +18,7 @@ import numpy as np
 import pandas as pd
 import os
 from keras.models import Sequential
-from keras.layers import Dense, Dropout, Flatten, Conv2D, MaxPooling2D, concatenate
+from keras.layers import Input, Dense, Dropout, Flatten, Conv2D, MaxPooling2D, concatenate
 from keras import Model
 from .datasets import *
 
@@ -31,10 +31,10 @@ l_train = np.asarray(training_data['rain'])
 v_train = np.asarray(training_data['area'])
 
 # define 4  sets of inputs
-inputA = x_train.shape[1]
-inputB = y_train.shape[1]
-inputC = z_train.shape[1]
-inputD = l_train.shape[1]
+inputA = Input(shape=x_train.shape[1],)
+inputB = Input(shape=y_train.shape[1],)
+inputC = Input(shape=z_train.shape[1],)
+inputD = Input(shape=l_train.shape[1],)
 
 # the first branch operates on the first input
 x = Dense(8, activation="relu")(inputA)
