@@ -30,43 +30,41 @@ l_train = np.asarray(training_data['rain'])
 
 v_train = np.asarray(training_data['area'])
 
-# define 4  sets of inputs
-inputA = Input(shape=x_train.shape[1],)
-inputB = Input(shape=y_train.shape[1],)
-inputC = Input(shape=z_train.shape[1],)
-inputD = Input(shape=l_train.shape[1],)
+# Set our input layers
+inputA = Input(shape=x_train.shape,)
+inputB = Input(shape=y_train.shape,)
+inputC = Input(shape=z_train.shape,)
+inputD = Input(shape=l_train.shape,)
 
-# the first branch operates on the first input
+# The first branch operates on the first input
 x = Dense(8, activation="relu")(inputA)
 x = Dense(4, activation="relu")(x)
 x = Model(inputs=inputA, outputs=x)
 
-# the second branch opreates on the second input
+# The second branch operates on the second input
 y = Dense(64, activation="relu")(inputB)
 y = Dense(32, activation="relu")(y)
 y = Dense(4, activation="relu")(y)
 y = Model(inputs=inputB, outputs=y)
 
-# the 3rd branch opreates on the second input
+# The 3rd branch operates on the second input
 z = Dense(64, activation="relu")(inputC)
 z = Dense(32, activation="relu")(z)
 z = Dense(4, activation="relu")(z)
 z = Model(inputs=inputC, outputs=z)
 
-# the 4th branch opreates on the second input
+# The 4th branch operates on the second input
 l = Dense(64, activation="relu")(inputD)
 l = Dense(32, activation="relu")(l)
 l = Dense(4, activation="relu")(l)
 l = Model(inputs=inputD, outputs=l)
 
-# combine the output of the 4 branches
+# Combine the output of the 4 branches
 combined = concatenate([x.output, y.output, z.output, l.output])
 
-# apply a FC layer and then a regression prediction on the
-# combined outputs
+# Apply a FC layer and then a regression prediction on the combined outputs
 v = Dense(2, activation="relu")(combined)
 v = Dense(1, activation="linear")(v)
 
-# our model will accept the inputs of the 4 branches and
-# then output a single value
+# The model will accept the inputs of the 4 branches and then output a single value
 model = Model(inputs=[x.output, y.output, z.output, l.output], outputs=vars)
