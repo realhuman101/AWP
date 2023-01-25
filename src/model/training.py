@@ -20,7 +20,7 @@ import os
 from keras.models import Model
 from keras.layers import Input, Dense, Dropout
 
-from datasets import *
+from .datasets import *
 
 # Loading in the training data
 temp_train = np.asarray(training_data['temp'])
@@ -72,4 +72,3 @@ y_test = np.asarray(testing_data['Classes'].apply(lambda x: 1 if x == 'fire' els
 test_loss, test_acc = model.evaluate(x_test, y_test, verbose=0) # Verbose = 0 for minimal output
 print('Test loss:', test_loss)
 print('Test accuracy:', test_acc)
-
