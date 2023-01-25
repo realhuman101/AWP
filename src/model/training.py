@@ -37,3 +37,18 @@ input_shape = x_train.shape[1:]
 
 # Define the input layer
 inputs = tf.keras.layers.Input(shape=input_shape)
+
+# Define the first dense layer
+x = tf.keras.layers.Dense(32, activation='relu')(inputs)
+
+# Define the dropout layer
+x = tf.keras.layers.Dropout(0.2)(x)
+
+# Define the second dense layer
+x = tf.keras.layers.Dense(16, activation='relu')(x)
+
+# Define the output layer
+outputs = tf.keras.layers.Dense(1, activation='sigmoid')(x)
+
+# Create the model
+model = tf.keras.models.Model(inputs=inputs, outputs=outputs)
