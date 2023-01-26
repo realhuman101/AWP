@@ -15,13 +15,11 @@
 # Importing the required libraries
 import tensorflow as tf
 import numpy as np
-import pandas as pd
-import os
 from keras.models import Model
 from keras.layers import Input, Dense, Dropout
 from sklearn.model_selection import train_test_split
 
-from .datasets import *
+from .datasets import dataset
 
 
 # Loading in the training data
