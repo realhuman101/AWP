@@ -17,17 +17,13 @@ import pandas as pd
 from ..model import datasets 
 
 def test_dataset() -> None:
-    testing_data: pd.DataFrame = datasets.testing_data
-    training_data: pd.DataFrame = datasets.training_data
+    dataset: pd.DataFrame = datasets.dataset
 
     # Check dataset types
-    assert isinstance(testing_data, pd.DataFrame)
-    assert isinstance(training_data, pd.DataFrame)
+    assert isinstance(dataset, pd.DataFrame)
 
     # Check no null
-    assert not testing_data.isnull().values.any()
-    assert not training_data.isnull().values.any()
+    assert not dataset.isnull().values.any()
 
     # Check columns
-    assert list(testing_data.columns) == ['Temperature', 'RH', 'Ws', 'Rain', 'Classes']
-    assert list(training_data.columns) == ['temp', 'RH', 'wind', 'rain', 'area']
+    assert list(dataset.columns) == ['Temperature', 'RH', 'Ws', 'Rain', 'Classes']

@@ -15,25 +15,15 @@
 import pandas as pd
 import os
 
-# Reading the CSV files into Dataframes
-training_data: pd.DataFrame = pd.read_csv(
+dataset: pd.DataFrame = pd.read_csv(
 											os.path.join(
 												os.path.dirname(__file__), 
-												"Training_Data.csv"
+												"dataset.csv"
 											)
 										)
 
-testing_data: pd.DataFrame = pd.read_csv(
-											os.path.join(
-												os.path.dirname(__file__), 
-												"Testing_Data.csv"
-											)
-										)
-
-# Removing/Dropping useless columns for the testing data
-testing_data = testing_data.drop(['year','month','day','FFMC','DMC','DC','ISI','BUI','FWI'], axis=1)
-training_data = training_data.drop(['X','Y','month','day','FFMC','DMC','DC','ISI',], axis=1)
+# Removing/Dropping useless columns for the datasets
+dataset = dataset.drop(['year','month','day','FFMC','DMC','DC','ISI','BUI','FWI'], axis=1)
 
 # Stripping whitespaces from all the data
-training_data.applymap(lambda x: x.strip() if isinstance(x, str) else x)
-testing_data.applymap(lambda x: x.strip() if isinstance(x, str) else x)
+dataset.applymap(lambda x: x.strip() if isinstance(x, str) else x)
