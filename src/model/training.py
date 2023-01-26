@@ -72,7 +72,7 @@ early_stopping = EarlyStopping(monitor='val_loss', patience=5)
 model.compile(optimizer=optimizer, loss='binary_crossentropy', metrics=['accuracy'])
 
 # Train the model
-model.fit(x_train, y_train, epochs=100, batch_size=32, validation_split=0.2, callbacks=[early_stopping])
+model.fit(x_train, y_train, epochs=150, batch_size=32, validation_split=0.2, callbacks=[early_stopping])
 
 # Evaluate model
 test_loss, test_acc = model.evaluate(x_test, y_test, verbose=0) # Verbose = 0 for minimal output
