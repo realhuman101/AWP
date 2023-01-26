@@ -55,7 +55,8 @@ setuptools.setup(
 		"numpy>=1.24.1",
 		"pandas>=1.5.2",
 		"requests>=2.28.1",
-		"sklearn>=0.0"
+		"sklearn>=0.0",
+		"matplotlib>=3.5.1"
     ],
 	entry_points = {
 		'gui_scripts': [
