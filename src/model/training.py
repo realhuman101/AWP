@@ -30,7 +30,7 @@ rain_train = np.asarray(dataset['Rain'])
 
 # Obtaining the x_train and y_train data
 xData = np.column_stack((temp_train, rh_train, wind_train, rain_train))
-yData = np.asarray(dataset['Classes'].apply(lambda x: 1 if x == 'fire' else 0))#np.asarray(training_data['area'].apply(lambda x: 1 if x > 0 else 0))
+yData = np.asarray(dataset['Classes'].apply(lambda x: 1 if x == 'fire' else 0))
 
 x_train, x_test, y_train, y_test = train_test_split(xData, yData, test_size=0.25)
 
