@@ -20,7 +20,7 @@ from keras.models import Model, save_model
 from keras.layers import Input, Dense, Dropout
 from sklearn.model_selection import train_test_split
 
-from datasets import dataset
+from .datasets import dataset
 
 
 # Loading in the training data
