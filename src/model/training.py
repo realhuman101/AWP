@@ -18,6 +18,7 @@ import numpy as np
 import os
 from keras.models import Model, save_model
 from keras.layers import Input, Dense, Dropout
+from keras.callbacks import EarlyStopping
 from sklearn.model_selection import train_test_split
 
 from .datasets import dataset
@@ -64,11 +65,14 @@ optimizer = tf.keras.optimizers.Adam(
 	epsilon=1e-07
 )
 
+# Define the early stopping criteria
+early_stopping = EarlyStopping(monitor='val_loss', patience=5)
+
 # Compile the model
 model.compile(optimizer=optimizer, loss='binary_crossentropy', metrics=['accuracy'])
 
 # Train the model
-model.fit(x_train, y_train, epochs=10, batch_size=32, validation_split=0.2)
+model.fit(x_train, y_train, epochs=150, batch_size=32, validation_split=0.2, callbacks=[early_stopping])
 
 # Evaluate model
 test_loss, test_acc = model.evaluate(x_test, y_test, verbose=0) # Verbose = 0 for minimal output
