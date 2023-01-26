@@ -15,11 +15,12 @@
 # Importing the required libraries
 import tensorflow as tf
 import numpy as np
+import os
 from keras.models import Model, save_model
 from keras.layers import Input, Dense, Dropout
 from sklearn.model_selection import train_test_split
 
-from .datasets import dataset
+from datasets import dataset
 
 
 # Loading in the training data
@@ -77,7 +78,7 @@ print('Test accuracy:', test_acc)
 # Save model
 save_model(
     model,
-    "raw/model.h5",
+    os.path.abspath(os.getcwd()) + "/src/model/raw/model.h5",
     overwrite=True,
     include_optimizer=True,
     save_format="h5",
