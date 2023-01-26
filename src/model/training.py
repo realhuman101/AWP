@@ -75,5 +75,3 @@ model.fit(x_train, y_train, epochs=10, batch_size=32, validation_split=0.2)
 test_loss, test_acc = model.evaluate(x_test, y_test, verbose=0) # Verbose = 0 for minimal output
 print('Test loss:', test_loss)
 print('Test accuracy:', test_acc)
-
-# NOTE: TESTING DATA MAKES MoRE CONSISTANT RESULTS???????
