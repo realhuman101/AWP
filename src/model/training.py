@@ -15,11 +15,12 @@
 # Importing the required libraries
 import tensorflow as tf
 import numpy as np
-from keras.models import Model
+import os
+from keras.models import Model, save_model
 from keras.layers import Input, Dense, Dropout
 from sklearn.model_selection import train_test_split
 
-from .datasets import dataset
+from datasets import dataset
 
 
 # Loading in the training data
@@ -73,3 +74,14 @@ model.fit(x_train, y_train, epochs=10, batch_size=32, validation_split=0.2)
 test_loss, test_acc = model.evaluate(x_test, y_test, verbose=0) # Verbose = 0 for minimal output
 print('Test loss:', test_loss)
 print('Test accuracy:', test_acc)
+
+# Save model
+save_model(
+    model,
+    os.path.abspath(os.getcwd()) + "/src/model/raw/model.h5",
+    overwrite=True,
+    include_optimizer=True,
+    save_format="h5",
+    signatures=None,
+    options=None
+)
