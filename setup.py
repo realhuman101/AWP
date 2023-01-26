@@ -58,7 +58,8 @@ setuptools.setup(
 		"sklearn>=0.0",
 		"matplotlib>=3.5.1",
 		"scikit-learn>=1.2.1",
-		"keras>=2.11.0"
+		"keras>=2.11.0",
+		"scipy>=1.10.0"
     ],
 	entry_points = {
 		'gui_scripts': [
