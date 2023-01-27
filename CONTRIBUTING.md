@@ -48,3 +48,11 @@ To run the program, run the following command:
 ```shell
 affp
 ```
+
+## Formatting
+
+Please make sure you follow all the Flake8 formatting rules (besides `W191` and `E501`). You can check this by running the following command:
+
+```shell
+flake8 --ignore=W191,E501
+```
