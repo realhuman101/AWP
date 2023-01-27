@@ -98,7 +98,7 @@ def currentWeather(place: str) -> dict:
 	except IndexError:
 		result['rain'] = 0
 	
-	return result
+	return dict(result)
 
 # FUTURE DATA
 
