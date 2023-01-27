@@ -45,7 +45,7 @@ For a complete list of requirements, please check our [requirements.txt](require
 
 ## Installation
 
-To install the required packages, run the following command:
+To install the required packages for development, run the following command:
 
 ```py
 pip install -r requirements.txt
@@ -57,16 +57,16 @@ Or, depending on your installation:
 pip3 install -r requirements.txt
 ```
 
-To install the program, run the following command:
+To install the program itself, run the following command:
 
 ```shell
-python setup.py install
+pip install .
 ```
 
 Or, depending on your installation:
 
 ```shell
-python3 setup.py install
+pip3 install .
 ```
 
 ## Usage
