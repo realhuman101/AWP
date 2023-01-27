@@ -2,7 +2,7 @@
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
 # the Free Software Foundation, version 3 of the License.
-# 
+#
 # This program is distributed in the hope that it will be useful,
 # but WITHOUT ANY WARRANTY; without even the implied warranty of
 # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
@@ -13,7 +13,7 @@
 # ======================================================================
 
 import tkinter as tk
-from tkinter import *
+
 
 def start() -> None:
 	# Opening the main window
@@ -21,7 +21,7 @@ def start() -> None:
 	window.title('AFFP')
 	window.geometry('1200x800')
 
-	# Making the Background #545454
+	# Setting the background color
 	canvas = tk.Canvas(window, width = 1200, height = 800, bg ='#545454')
 	canvas.place(relx = 0.5, rely = 0.5, anchor = 'center')
 
@@ -42,4 +42,3 @@ def start() -> None:
 	button2.place(relx = 0.76, rely = 0.63, anchor = 'center')
 
 	window.mainloop()
-	
