@@ -15,6 +15,7 @@
   - [Installation](#installation)
   - [Usage](#usage)
   - [Datasets](#datasets)
+  - [Model](#model)
   - [Contributing](#contributing)
   - [License](#license)
   - [Credits](#credits)
@@ -70,6 +71,12 @@ Project is still **in development** and is therefore unavailable for use.
     - Faroudja ABID, fabid@cdta.dz, abidfaroudja@gmail.com, Microelectronic & Nanotechnology Division, Center for Development of Advanced Technologies (CDTA).
   - Relevant Papers:
     - Faroudja ABID et al., Predicting Forest Fire in Algeria using Data Mining Techniques: Case Study of the Decision Tree Algorithm, International Conference on Advanced Intelligent Systems for Sustainable Development (AI2SD 2019) , 08 - 11 July, 2019, Marrakech, Morocco.
+
+## Model
+
+Please visit the [model notebook](src/model/model.ipynb) for more information.  
+
+The model is to predict the likelihood of forest fires using Tensorflow and Keras in Python. The model takes in temperature in Celsius, relative humidity as a percentage, wind speed in Kilometers per hour, and rain size in millimeters as input, and outputs a probability score between 0 and 1 indicating the likelihood of a forest fire. The model is trained on historical forest fire data, optimized using the Adam optimizer, and has an early stopping criterion to prevent overfitting. The model is then saved as a .h5 file for use in the main program.
 
 ## Contributing
 
