@@ -18,6 +18,10 @@ import requests
 from ..observing import currentWeather, futureWeather
 
 def test_currentWeather() -> None:
+	'''
+	Test the current weather function
+	'''
+
 	# List of some places in Hong Kong to test the weather data
 	places = ['Cheung Chau', 'Wan Chai', 'Ta Kwu Ling', 'Tai Po Kau', 'Wong Tai Sin', 'Pak Shek Kok', 'Ma On Shan', 'Chek Lap Kok', 'Cheung Sha', 'Central & Western District', 'Pak Tam Chung', 'Yau Tsim Mong', 'Sai Kung Man Yee Road', 'Kwai Tsing', 'Eastern District', 'Nei Kung Uk', 'Lee Kum Kee Family Walk', 'Peng Chau', 'Hong Kong Museum of History', 'Pak Tam Au', 'Sham Shui Po', 'Tuen Mun', 'High Island', 'Shatin Pass', 'Kwun Tong Ferry', 'Happy Valley', 'Man Kam To', 'Kwai Chung', 'Kwun Tong', 'Plover Cove', 'Nam Long Shan', 'Ngong Ping', 'Kowloon City', 'Tai Mei Tuk', 'Mui Wo', 'Wong Chuk Hang', 'Tsing Yi', 'Hong Kong Park', "King's Park", 'Sai Kung Ho Chung', 'Hong Kong Observatory', 'Ho Man Tin', 'Lantau Island', 'Golden Hill', 'Kwai Fong', 'Tai Po', 'Yuen Long', 'Shek Kong', 'Lion Rock', 'Lamma Island', 'Kwun Yam Shan', 'Tseung Kwan O', 'Hang Hau', 'Sai Kung', 'Islands District', 'Sha Tin', 'Pak Kong', 'Lau Fau Shan', 'Southern District', 'North District', 'Tsuen Wan', 'Lo Wu', 'Tai Mo Shan']
 
@@ -36,9 +40,13 @@ def test_currentWeather() -> None:
 		assert 500 >= weather['rain'] >= 0
 
 def test_futureWeather() -> None:
+	'''
+	Test the future weather function and the return values
+	'''
+
 	weather = futureWeather()
 
-	for day in range(1,10):
+	for day in range(1,10): # 9 days of weather data
 		# Check if the weather data is within the expected range
 		assert 50 >= weather[day]['temp'] >= -20
 		assert 100 >= weather[day]['rh'] >= 0
