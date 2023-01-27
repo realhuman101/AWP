@@ -12,7 +12,7 @@
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 # ======================================================================
 
-from ..observing.HKobservatory import currentWeather, futureWeather
+from ..observing import currentWeather, futureWeather
 
 def test_currentWeather() -> None:
 	# List of some places in Hong Kong to test the weather data
