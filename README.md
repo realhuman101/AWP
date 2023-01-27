@@ -59,7 +59,29 @@ pip3 install -r requirements.txt
 
 ## Usage
 
-Project is still **in development** and is therefore unavailable for use.
+> **NOTE:** Project is still **in development** and is therefore unavailable for use. The following instructions are for development purposes only.
+
+First we must install the program, which can be done by running the following command:
+
+```shell
+python setup.py install
+```
+
+Or, depending on your installation:
+
+```shell
+python3 setup.py install
+```
+
+Then, we can run the program by running the following command:
+
+```shell
+affp
+```
+
+A GUI will then appear.
+
+> These instructions are not yet completed, and will be completed upon completion of the project.
 
 ## Datasets
 
