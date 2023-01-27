@@ -15,18 +15,20 @@
 import requests
 import json
 
+def accessAPI(dataType: str) -> dict:
+	url = f'https://data.weather.gov.hk/weatherAPI/opendata/weather.php?dataType={dataType}&lang=en'
+	response = requests.get(url)
+	data = json.loads(response.json())
+	return data
+
 # CURRENT DATA
 
 class currentWeather:
 	def __init__(self) -> None:
-		url = 'https://data.weather.gov.hk/weatherAPI/opendata/weather.php?dataType=rhrread&lang=en'
-		response = requests.get(url)
-		data = json.loads(response.json())
+		data = accessAPI('rhrread')
 
 # FUTURE DATA
 
 class futureWeather:
 	def __init__(self) -> None:
-		url = 'https://data.weather.gov.hk/weatherAPI/opendata/weather.php?dataType=fnd&lang=en'
-		response = requests.get(url)
-		data = json.loads(response.json())
+		data = accessAPI('fnd')
