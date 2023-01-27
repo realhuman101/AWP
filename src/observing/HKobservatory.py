@@ -33,7 +33,7 @@ def currentWeather(place: str) -> dict:
 
 	rainfall_data = data["rainfall"]["data"]
 	temperature_data = data["temperature"]["data"]
-	uvindex_data = data["uvindex"]["data"]
+	humidity_data = data["humidity"]["data"]
 
 	for item in rainfall_data:
 		if item["place"] == place:
@@ -45,16 +45,16 @@ def currentWeather(place: str) -> dict:
 			result['temperature'] = item["value"]
 			break
 
-	for item in uvindex_data:
+	for item in humidity_data:
 		if item["place"] == place:
-			result['uvindex'] = item["value"]
+			result['humidity'] = item["value"]
 			break
 
 	try:
-		if result['uvindex'] == 'N/A':
-			result['uvindex'] = uvindex_data[0]["value"]
+		if result['humidity'] == 'N/A':
+			result['humidity'] = humidity_data[0]["value"]
 	except IndexError:
-		result['uvindex'] = 0
+		result['humidity'] = 0
 	
 	try:
 		if result['temperature'] == 'N/A':
