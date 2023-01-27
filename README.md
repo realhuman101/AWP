@@ -112,4 +112,4 @@ We would like to thank the following people and organizations for their support 
 - [Maya Yan](https://github.com/mayahkg) for contributing code and ideas.
 - [CityU EE GEF](https://cityueegef.github.io/) for providing funding, opportunities and resources.
 
-We are grateful for the support of our community and for the contributions of everyone who has helped make this project what it is.
+We are grateful for the support of CityU and for the contributions of everyone who has helped make this project what it is.
