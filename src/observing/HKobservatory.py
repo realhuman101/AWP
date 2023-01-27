@@ -57,40 +57,40 @@ def currentWeather(place: str) -> dict:
 	data = accessAPI('rhrread')
 	result = defaultdict(lambda: 'N/A')
 
-	rainfall_data = data["rainfall"]["data"]
-	temperature_data = data["temperature"]["data"]
-	humidity_data = data["humidity"]["data"]
+	rainfall_data = data['rainfall']['data']
+	temperature_data = data['temperature']['data']
+	humidity_data = data['humidity']['data']
 
 	for item in rainfall_data:
-		if item["place"] == place:
-			result['rain'] = item["max"]
+		if item['place'] == place:
+			result['rain'] = item['max']
 			break
 
 	for item in temperature_data:
-		if item["place"] == place:
-			result['temperature'] = item["value"]
+		if item['place'] == place:
+			result['temperature'] = item['value']
 			break
 
 	for item in humidity_data:
-		if item["place"] == place:
-			result['humidity'] = item["value"]
+		if item['place'] == place:
+			result['humidity'] = item['value']
 			break
 
 	try:
 		if result['humidity'] == 'N/A':
-			result['humidity'] = humidity_data[0]["value"]
+			result['humidity'] = humidity_data[0]['value']
 	except IndexError:
 		result['humidity'] = 0
 	
 	try:
 		if result['temperature'] == 'N/A':
-			result['temperature'] = temperature_data[0]["value"]
+			result['temperature'] = temperature_data[0]['value']
 	except IndexError:
 		result['temperature'] = 20 # Approx room temperature
 	
 	try:
 		if result['rain'] == 'N/A':
-			result['rain'] = rainfall_data[0]["max"]
+			result['rain'] = rainfall_data[0]['max']
 	except IndexError:
 		result['rain'] = 0
 	
@@ -111,14 +111,14 @@ def futureWeather() -> dict:
 	data = accessAPI('fnd')
 	result = {}
 
-	for time, forecast in enumerate(data["weatherForecast"], 1):
-		windSpeed = convertWind(int(re.search(r'\d+', forecast["forecastWind"]).group()))
+	for time, forecast in enumerate(data['weatherForecast'], 1):
+		windSpeed = convertWind(int(re.search(r'\d+', forecast['forecastWind']).group()))
 
 		result[time] = {
-			"temp": (forecast["forecastMaxtemp"]["value"]+forecast["forecastMintemp"]["value"])/2,
-			"rh": (forecast["forecastMaxrh"]["value"]+forecast["forecastMinrh"]["value"])/2,
-			"wind": windSpeed,
-			"rain": 10 if forecast["PSR"] == "High" else 5 if forecast["PSR"] == "Medium High" else 0
+			'temp': (forecast['forecastMaxtemp']['value']+forecast['forecastMintemp']['value'])/2,
+			'rh': (forecast['forecastMaxrh']['value']+forecast['forecastMinrh']['value'])/2,
+			'wind': windSpeed,
+			'rain': 10 if forecast['PSR'] == 'High' else 5 if forecast['PSR'] == 'Medium High' else 0
 		}
 	
 	return result
