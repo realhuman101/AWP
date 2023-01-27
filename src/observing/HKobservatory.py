@@ -20,6 +20,20 @@ from collections import defaultdict
 from .unitConvert import convertWind
 
 def accessAPI(dataType: str) -> dict:
+	'''
+	To access the HKO API, documentation can be found at https://www.hko.gov.hk/en/weatherAPI/doc/files/HKO_Open_Data_API_Documentation.pdf
+
+	`datatype: str` = The type of data to be accessed, can be one of the following:  
+	- `flw`: Local Weather Forecast  
+	- `fnd`: 9-day Weather Forecast  
+	- `rhrread`: Current Weather Report  
+	- `warnsum`: Weather Warning Summary  
+	- `warningInfo`: Weather Warning Information  
+	- `swt`: Special Weather Tips  
+
+	Returns a JSON of the response data
+	'''
+
 	url = f'https://data.weather.gov.hk/weatherAPI/opendata/weather.php?dataType={dataType}&lang=en'
 	response = requests.get(url)
 	data = response.json()
@@ -28,6 +42,18 @@ def accessAPI(dataType: str) -> dict:
 # CURRENT DATA
 
 def currentWeather(place: str) -> dict:
+	'''
+	To access current weather data, specifically the temperature (C), humidity (%) and rainfall (mm)
+	The data is returned in a dictionary with the following keys:
+	- `temperature`: The temperature in degrees Celsius
+	- `humidity`: The humidity in percentage
+	- `rain`: The rainfall in millimetres
+
+	`place: str` = The place to get the data from
+
+	In the event that the data is not available, the value will be set to 0 (unless the temperature, which will be set to 20)
+	'''
+
 	data = accessAPI('rhrread')
 	result = defaultdict(lambda: 'N/A')
 
@@ -73,6 +99,15 @@ def currentWeather(place: str) -> dict:
 # FUTURE DATA
 
 def futureWeather() -> dict:
+	'''
+	To access future weather data, specifically the temperature (C), humidity (%), wind speed (km/h) and rainfall (mm)
+	The data is returned in a dictionary of days, from 1-9, with the following keys:
+	- `temp`: The temperature in degrees Celsius
+	- `rh`: The humidity in percentage
+	- `wind`: The wind speed in kilometres per hour
+	- `rain`: The rainfall in millimetres
+	'''
+
 	data = accessAPI('fnd')
 	result = {}
 
