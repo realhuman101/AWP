@@ -57,11 +57,7 @@ Or, depending on your installation:
 pip3 install -r requirements.txt
 ```
 
-## Usage
-
-> **NOTE:** Project is still **in development** and is therefore unavailable for use. The following instructions are for development purposes only.
-
-First we must install the program, which can be done by running the following command:
+To install the program, run the following command:
 
 ```shell
 python setup.py install
@@ -73,7 +69,13 @@ Or, depending on your installation:
 python3 setup.py install
 ```
 
-Then, we can run the program by running the following command:
+## Usage
+
+> **NOTE:** Project is still **in development** and is therefore unavailable for use. The following instructions are for development purposes only.
+
+First we must install the program, which can be done by following the instructions in the [Installation](#installation) section.
+
+We can then run/start the program by running the following command:
 
 ```shell
 affp
