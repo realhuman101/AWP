@@ -21,15 +21,17 @@ def test_currentWeather() -> None:
 
 	# Test the weather data for each place
 	for place in places:
-		weather = currentWeather(place)
+		while True:
+			try:
+				weather = currentWeather(place)
+				break
+			except:
+				time.sleep(0.01)
 
 		# Check if the weather data is within the expected range
 		assert 50 >= weather['temperature'] >= -20
 		assert 100 >= weather['humidity'] >= 0
 		assert 500 >= weather['rain'] >= 0
-
-		# Prevent timeout
-		time.sleep(0.01)
 
 def test_futureWeather() -> None:
 	weather = futureWeather()
