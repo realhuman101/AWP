@@ -12,6 +12,7 @@
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 # ======================================================================
 
+import time
 from ..observing import currentWeather, futureWeather
 
 def test_currentWeather() -> None:
@@ -27,6 +28,9 @@ def test_currentWeather() -> None:
 		assert 100 >= weather['humidity'] >= 0
 		assert 500 >= weather['rain'] >= 0
 
+		# Prevent timeout
+		time.sleep(0.01)
+
 def test_futureWeather() -> None:
 	weather = futureWeather()
 
@@ -36,3 +40,6 @@ def test_futureWeather() -> None:
 		assert 100 >= weather[day]['rh'] >= 0
 		assert 192 >= weather[day]['wind'] >= 0 and weather[day]['wind'] in [0, 3, 9, 16, 24, 34, 44, 56, 68, 82, 96, 110, 124, 141, 157, 175, 192]
 		assert 500 >= weather[day]['rain'] >= 0
+
+		# Prevent timeout
+		time.sleep(0.01)
