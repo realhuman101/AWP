@@ -1,6 +1,8 @@
 def convertWind(windSpeed: int) -> int:
 	'''
 	Converts wind speed from Beaufort scale to km/h
+
+	Conversion table from https://www.weather.gov/jetstream/beaufort_max
 	'''
 
 	match windSpeed:
