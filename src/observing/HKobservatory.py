@@ -54,6 +54,7 @@ def currentWeather(place: str) -> dict:
 	In the event that the data is not available, the value will be set to 0 (unless the temperature, which will be set to 20)
 	'''
 
+	# Access data
 	data = accessAPI('rhrread')
 	result = defaultdict(lambda: 'N/A')
 
@@ -61,6 +62,7 @@ def currentWeather(place: str) -> dict:
 	temperature_data = data['temperature']['data']
 	humidity_data = data['humidity']['data']
 
+	# Get data specific to place
 	for item in rainfall_data:
 		if item['place'] == place:
 			result['rain'] = item['max']
@@ -76,6 +78,8 @@ def currentWeather(place: str) -> dict:
 			result['humidity'] = item['value']
 			break
 
+	# If data is not available, use the first available data
+	# If there is no data available, set to 0 (except temperature, which is set to 20 degrees)
 	try:
 		if result['humidity'] == 'N/A':
 			result['humidity'] = humidity_data[0]['value']
@@ -108,12 +112,15 @@ def futureWeather() -> dict:
 	- `rain`: The rainfall in millimetres
 	'''
 
+	# Access data
 	data = accessAPI('fnd')
 	result = {}
 
+	# Get data for each day in the 9 day forecast
 	for time, forecast in enumerate(data['weatherForecast'], 1):
-		windSpeed = convertWind(int(re.search(r'\d+', forecast['forecastWind']).group()))
+		windSpeed = convertWind(int(re.search(r'\d+', forecast['forecastWind']).group())) # Convert wind speed to km/h
 
+		# Set results for each day
 		result[time] = {
 			'temp': (forecast['forecastMaxtemp']['value']+forecast['forecastMintemp']['value'])/2,
 			'rh': (forecast['forecastMaxrh']['value']+forecast['forecastMinrh']['value'])/2,
