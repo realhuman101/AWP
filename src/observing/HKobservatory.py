@@ -2,7 +2,7 @@
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
 # the Free Software Foundation, version 3 of the License.
-# 
+#
 # This program is distributed in the hope that it will be useful,
 # but WITHOUT ANY WARRANTY; without even the implied warranty of
 # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
@@ -16,20 +16,20 @@ import requests
 import json
 import re
 from collections import defaultdict
-
 from .unitConvert import convertWind
+
 
 def accessAPI(dataType: str) -> dict:
 	'''
 	To access the HKO API, documentation can be found at https://www.hko.gov.hk/en/weatherAPI/doc/files/HKO_Open_Data_API_Documentation.pdf
 
-	`datatype: str` = The type of data to be accessed, can be one of the following:  
-	- `flw`: Local Weather Forecast  
-	- `fnd`: 9-day Weather Forecast  
-	- `rhrread`: Current Weather Report  
-	- `warnsum`: Weather Warning Summary  
-	- `warningInfo`: Weather Warning Information  
-	- `swt`: Special Weather Tips  
+	`datatype: str` = The type of data to be accessed, can be one of the following:
+	- `flw`: Local Weather Forecast
+	- `fnd`: 9-day Weather Forecast
+	- `rhrread`: Current Weather Report
+	- `warnsum`: Weather Warning Summary
+	- `warningInfo`: Weather Warning Information
+	- `swt`: Special Weather Tips
 
 	Returns a JSON of the response data
 	'''
@@ -40,6 +40,7 @@ def accessAPI(dataType: str) -> dict:
 	return data
 
 # CURRENT DATA
+
 
 def currentWeather(place: str) -> dict:
 	'''
@@ -85,22 +86,23 @@ def currentWeather(place: str) -> dict:
 			result['humidity'] = humidity_data[0]['value']
 	except IndexError:
 		result['humidity'] = 0
-	
+
 	try:
 		if result['temperature'] == 'N/A':
 			result['temperature'] = temperature_data[0]['value']
 	except IndexError:
-		result['temperature'] = 20 # Approx room temperature
-	
+		result['temperature'] = 20  # Approx room temperature
+
 	try:
 		if result['rain'] == 'N/A':
 			result['rain'] = rainfall_data[0]['max']
 	except IndexError:
 		result['rain'] = 0
-	
+
 	return dict(result)
 
 # FUTURE DATA
+
 
 def futureWeather() -> dict:
 	'''
@@ -118,14 +120,14 @@ def futureWeather() -> dict:
 
 	# Get data for each day in the 9 day forecast
 	for time, forecast in enumerate(data['weatherForecast'], 1):
-		windSpeed = convertWind(int(re.search(r'\d+', forecast['forecastWind']).group())) # Convert wind speed to km/h
+		windSpeed = convertWind(int(re.search(r'\d+', forecast['forecastWind']).group()))  # Convert wind speed to km/h
 
 		# Set results for each day
 		result[time] = {
-			'temp': (forecast['forecastMaxtemp']['value']+forecast['forecastMintemp']['value'])/2,
-			'rh': (forecast['forecastMaxrh']['value']+forecast['forecastMinrh']['value'])/2,
+			'temp': (forecast['forecastMaxtemp']['value'] + forecast['forecastMintemp']['value']) / 2,
+			'rh': (forecast['forecastMaxrh']['value'] + forecast['forecastMinrh']['value']) / 2,
 			'wind': windSpeed,
 			'rain': 10 if forecast['PSR'] == 'High' else 5 if forecast['PSR'] == 'Medium High' else 0
 		}
-	
+
 	return result

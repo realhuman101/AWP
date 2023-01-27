@@ -2,7 +2,7 @@
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
 # the Free Software Foundation, version 3 of the License.
-# 
+#
 # This program is distributed in the hope that it will be useful,
 # but WITHOUT ANY WARRANTY; without even the implied warranty of
 # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
@@ -75,17 +75,17 @@ model.compile(optimizer=optimizer, loss='binary_crossentropy', metrics=['accurac
 model.fit(x_train, y_train, epochs=150, batch_size=32, validation_split=0.2, callbacks=[early_stopping])
 
 # Evaluate model
-test_loss, test_acc = model.evaluate(x_test, y_test, verbose=0) # Verbose = 0 for minimal output
+test_loss, test_acc = model.evaluate(x_test, y_test, verbose=0)  # Verbose = 0 for minimal output
 print('Test loss:', test_loss)
 print('Test accuracy:', test_acc)
 
 # Save model
 save_model(
-    model,
-    os.path.abspath(os.getcwd()) + "/src/model/raw/model.h5",
-    overwrite=True,
-    include_optimizer=True,
-    save_format="h5",
-    signatures=None,
-    options=None
+	model,
+	os.path.abspath(os.getcwd()) + "/src/model/raw/model.h5",
+	overwrite=True,
+	include_optimizer=True,
+	save_format="h5",
+	signatures=None,
+	options=None
 )

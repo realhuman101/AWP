@@ -2,7 +2,7 @@
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
 # the Free Software Foundation, version 3 of the License.
-# 
+#
 # This program is distributed in the hope that it will be useful,
 # but WITHOUT ANY WARRANTY; without even the implied warranty of
 # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
@@ -16,6 +16,7 @@ import time
 import requests
 
 from ..observing import currentWeather, futureWeather
+
 
 def test_currentWeather() -> None:
 	'''
@@ -39,6 +40,7 @@ def test_currentWeather() -> None:
 		assert 100 >= weather['humidity'] >= 0
 		assert 500 >= weather['rain'] >= 0
 
+
 def test_futureWeather() -> None:
 	'''
 	Test the future weather function and the return values
@@ -46,7 +48,7 @@ def test_futureWeather() -> None:
 
 	weather = futureWeather()
 
-	for day in range(1,10): # 9 days of weather data
+	for day in range(1, 10):  # 9 days of weather data
 		# Check if the weather data is within the expected range
 		assert 50 >= weather[day]['temp'] >= -20
 		assert 100 >= weather[day]['rh'] >= 0
