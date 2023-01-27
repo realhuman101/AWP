@@ -1,4 +1,8 @@
 def convertWind(windSpeed: int) -> int:
+	'''
+	Converts wind speed from Beaufort scale to km/h
+	'''
+
 	match windSpeed:
 		case 0:
 			windSpeed = 0
