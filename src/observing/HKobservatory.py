@@ -45,4 +45,5 @@ def futureWeather() -> dict:
 			"wind": windSpeed,
 			"rain": 10 if forecast["PSR"] == "High" else 5 if forecast["PSR"] == "Medium High" else 0
 		}
+	
 	return result
