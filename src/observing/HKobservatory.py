@@ -15,6 +15,7 @@
 import requests
 import json
 import re
+from collections import defaultdict
 
 from .unitConvert import convertWind
 
@@ -26,9 +27,48 @@ def accessAPI(dataType: str) -> dict:
 
 # CURRENT DATA
 
-class currentWeather:
-	def __init__(self) -> None:
-		data = accessAPI('rhrread')
+def currentWeather(place: str) -> dict:
+	data = accessAPI('rhrread')
+	result = defaultdict(lambda: 'N/A')
+
+	rainfall_data = data["rainfall"]["data"]
+	temperature_data = data["temperature"]["data"]
+	uvindex_data = data["uvindex"]["data"]
+
+	for item in rainfall_data:
+		if item["place"] == place:
+			result['rain'] = item["max"]
+			break
+
+	for item in temperature_data:
+		if item["place"] == place:
+			result['temperature'] = item["value"]
+			break
+
+	for item in uvindex_data:
+		if item["place"] == place:
+			result['uvindex'] = item["value"]
+			break
+
+	try:
+		if result['uvindex'] == 'N/A':
+			result['uvindex'] = uvindex_data[0]["value"]
+	except IndexError:
+		result['uvindex'] = 0
+	
+	try:
+		if result['temperature'] == 'N/A':
+			result['temperature'] = temperature_data[0]["value"]
+	except IndexError:
+		result['temperature'] = 20 # Approx room temperature
+	
+	try:
+		if result['rain'] == 'N/A':
+			result['rain'] = rainfall_data[0]["max"]
+	except IndexError:
+		result['rain'] = 0
+	
+	return result
 
 # FUTURE DATA
 
