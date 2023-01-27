@@ -13,6 +13,7 @@
 # ======================================================================
 
 import time
+import requests
 from ..observing import currentWeather, futureWeather
 
 def test_currentWeather() -> None:
@@ -25,7 +26,7 @@ def test_currentWeather() -> None:
 			try:
 				weather = currentWeather(place)
 				break
-			except:
+			except requests.exceptions.ConnectionError:
 				time.sleep(0.01)
 
 		# Check if the weather data is within the expected range
