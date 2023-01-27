@@ -19,7 +19,7 @@ import re
 def accessAPI(dataType: str) -> dict:
 	url = f'https://data.weather.gov.hk/weatherAPI/opendata/weather.php?dataType={dataType}&lang=en'
 	response = requests.get(url)
-	data = json.loads(response.json())
+	data = response.json()
 	return data
 
 # CURRENT DATA
@@ -34,11 +34,11 @@ def futureWeather() -> dict:
 	data = accessAPI('fnd')
 	result = {}
 
-	for time, forecast in enumerate(data["weatherForecast"]):
+	for time, forecast in enumerate(data["weatherForecast"], 1):
 		result[time] = {
 			"temp": (forecast["forecastMaxtemp"]["value"]+forecast["forecastMintemp"]["value"])/2,
 			"rh": (forecast["forecastMaxrh"]["value"]+forecast["forecastMinrh"]["value"])/2,
 			"wind": int(re.search(r'\d+', forecast["forecastWind"]).group()),
 			"rain": 10 if forecast["PSR"] == "High" else 5 if forecast["PSR"] == "Medium High" else 0
 		}
-	return data
+	return result
