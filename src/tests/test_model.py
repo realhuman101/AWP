@@ -17,6 +17,10 @@ import pandas as pd
 from ..model import datasets 
 
 def test_dataset() -> None:
+    '''
+    Test the dataset for null values, types and columns
+    '''
+
     dataset: pd.DataFrame = datasets.dataset
 
     # Check dataset types
