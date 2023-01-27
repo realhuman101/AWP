@@ -13,6 +13,3 @@
 # ======================================================================
 
 from .HKobservatory import currentWeather, futureWeather
-
-def getWeather():
-	pass
