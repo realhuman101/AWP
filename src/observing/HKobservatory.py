@@ -16,6 +16,8 @@ import requests
 import json
 import re
 
+from .unitConvert import convertWind
+
 def accessAPI(dataType: str) -> dict:
 	url = f'https://data.weather.gov.hk/weatherAPI/opendata/weather.php?dataType={dataType}&lang=en'
 	response = requests.get(url)
@@ -35,10 +37,12 @@ def futureWeather() -> dict:
 	result = {}
 
 	for time, forecast in enumerate(data["weatherForecast"], 1):
+		windSpeed = convertWind(int(re.search(r'\d+', forecast["forecastWind"]).group()))
+
 		result[time] = {
 			"temp": (forecast["forecastMaxtemp"]["value"]+forecast["forecastMintemp"]["value"])/2,
 			"rh": (forecast["forecastMaxrh"]["value"]+forecast["forecastMinrh"]["value"])/2,
-			"wind": int(re.search(r'\d+', forecast["forecastWind"]).group()),
+			"wind": windSpeed,
 			"rain": 10 if forecast["PSR"] == "High" else 5 if forecast["PSR"] == "Medium High" else 0
 		}
 	return result
