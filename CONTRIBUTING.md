@@ -11,7 +11,7 @@ When contributing, please follow the [Code of Conduct](CODE_OF_CONDUCT.md), and 
 4. Push the new branch to your fork
 5. Submit a pull request
 
-## Developing the project
+## Installing the program
 
 First, clone the repository:
 
