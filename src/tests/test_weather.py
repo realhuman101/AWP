@@ -14,6 +14,7 @@
 
 import time
 import requests
+
 from ..observing import currentWeather, futureWeather
 
 def test_currentWeather() -> None:
