@@ -13,11 +13,9 @@
 # ======================================================================
 
 import tkinter as tk
-#get manual_input from Manualinput.py
-from gui.pages.Manualinput import manual_input
 #import pyglet
 
-def start() -> None:
+def prediction() -> None:
 	# Opening the main window
 	window = tk.Tk()
 	window.title('AWP')
@@ -33,9 +31,9 @@ def start() -> None:
 	#pyglet.font.add_file('src\gui\fonts\Montserrat.ttf')
 
 	# Creating the main text
-	label = tk.Label(window, text='AUTOMATED FOREST', bg='#545454', fg='white', font=('Montserrat', 30))
+	label = tk.Label(window, text='AUTOMATED', bg='#545454', fg='white', font=('Montserrat', 30))
 	label.place(relx = 0.25,rely = 0.47, anchor = 'center')
-	label = tk.Label(window, text='FIRE PREDICTION', bg='#545454', fg='white',  font=('Montserrat', 30))
+	label = tk.Label(window, text='PREDICTIONS', bg='#545454', fg='white',  font=('Montserrat', 30))
 	label.place(relx = 0.25,rely = 0.53, anchor = 'center')
 
 	# Creating the Rectangle
@@ -43,9 +41,11 @@ def start() -> None:
 	canvas.place(relx = 0.75, rely = 0.5, anchor = 'center')
 
 	# Creating buttons
-	button1 = tk.Button(window, text='MANUAL PREDICTION', font=('Montserrat', 20), borderwidth=0, command = manual_input())
+	button1 = tk.Button(window, text='PRESENT PREDICTION', font=('Montserrat', 20), borderwidth=0, command = window.destroy)
 	button1.place(relx = 0.76, rely = 0.32, anchor = 'center')
-	button2 = tk.Button(window, text='AUTOMATED PREDICTION', font=('Montserrat', 20), borderwidth=0, command = window.destroy)
+	button2 = tk.Button(window, text='FUTURE PREDICTION', font=('Montserrat', 20), borderwidth=0, command = window.destroy)
 	button2.place(relx = 0.76, rely = 0.63, anchor = 'center')
 
 	window.mainloop()
+
+prediction()
