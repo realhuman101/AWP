@@ -12,12 +12,10 @@
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 # ======================================================================
 import tkinter as tk
-from model.training import get_precentage
-
 #import pyglet   
 
 def manual_input() -> None:
-    # Opening the main window
+
     window = tk.Tk()
     window.title('Manual Input')
     window.attributes('-fullscreen',True)
@@ -58,9 +56,8 @@ def manual_input() -> None:
     
 
     # Creating buttons
-    button1 = tk.Button(window, text='    PREDICT    ', font=('Montserrat', 20), borderwidth=0, command = get_precentage(temp.get(), rh.get(), ws.get(), rain.get()))
+    button1 = tk.Button(window, text='    PREDICT    ', font=('Montserrat', 20), borderwidth=0, command = window.destroy)
     button1.place(relx = 0.5, rely = 0.9, anchor = 'center')
 
     window.mainloop()
 
-manual_input()

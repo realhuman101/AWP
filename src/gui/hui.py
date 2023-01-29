@@ -1,24 +1,7 @@
-# ======================================================================
-# This program is free software: you can redistribute it and/or modify
-# it under the terms of the GNU General Public License as published by
-# the Free Software Foundation, version 3 of the License.
-#
-# This program is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-# GNU General Public License for more details.
-
-# You should have received a copy of the GNU General Public License
-# along with this program.  If not, see <https://www.gnu.org/licenses/>.
-# ======================================================================
-
 import tkinter as tk
-from pages.manualInput import manual_input
-from pages.predictions import prediction
-#import pyglet
+#get manual_input from Manualinput.py
+from .pages.manualInput import manual_input
 
-#def start() -> None:
-# Opening the main window
 window = tk.Tk()
 window.title('AWP')
 window.attributes('-fullscreen',True)
@@ -45,8 +28,7 @@ canvas.place(relx = 0.75, rely = 0.5, anchor = 'center')
 # Creating buttons
 button1 = tk.Button(window, text='MANUAL PREDICTION', font=('Montserrat', 20), borderwidth=0, command = manual_input)
 button1.place(relx = 0.76, rely = 0.32, anchor = 'center')
-button2 = tk.Button(window, text='AUTOMATED PREDICTION', font=('Montserrat', 20), borderwidth=0, command = prediction)
+button2 = tk.Button(window, text='AUTOMATED PREDICTION', font=('Montserrat', 20), borderwidth=0, command = window.destroy)
 button2.place(relx = 0.76, rely = 0.63, anchor = 'center')
 
 window.mainloop()
-

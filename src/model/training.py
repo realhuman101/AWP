@@ -92,14 +92,3 @@ save_model(
 )
 
 # Precentage
-def get_precentage(temp, rh, wind, rain):
-    window = tk.Tk()
-    window.title('Calculations')
-    window.geometry('400x400')
-    prediction = model.predict(np.array([[temp, rh, wind, rain]]))
-    p = prediction[0][0]*100
-    label = tk.Label(window, text=str(p)+'%', bg='#545454', fg='white', font=('Montserrat', 30))
-    label.place(relx = 0.5,rely = 0.5, anchor = 'center')
-
-    window.mainloop()
-    
