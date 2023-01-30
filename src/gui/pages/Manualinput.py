@@ -12,7 +12,6 @@
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 # ======================================================================
 import tkinter as tk
-#import pyglet   
 
 def manual_input() -> None:
 
@@ -60,4 +59,3 @@ def manual_input() -> None:
     button1.place(relx = 0.5, rely = 0.9, anchor = 'center')
 
     window.mainloop()
-
