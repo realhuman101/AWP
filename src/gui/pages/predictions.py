@@ -31,9 +31,9 @@ def prediction() -> None:
 	#pyglet.font.add_file('src\gui\fonts\Montserrat.ttf')
 
 	# Creating the main text
-	label = tk.Label(window, text='AUTOMATED', bg='#545454', fg='white', font=('Montserrat', 30))
+	label = tk.Label(window, text='AUTOMATED', bg='#545454', fg='white', font=('Times new roman', 30))
 	label.place(relx = 0.25,rely = 0.47, anchor = 'center')
-	label = tk.Label(window, text='PREDICTIONS', bg='#545454', fg='white',  font=('Montserrat', 30))
+	label = tk.Label(window, text='PREDICTIONS', bg='#545454', fg='white',  font=('Times new roman', 30))
 	label.place(relx = 0.25,rely = 0.53, anchor = 'center')
 
 	# Creating the Rectangle
@@ -41,11 +41,10 @@ def prediction() -> None:
 	canvas.place(relx = 0.75, rely = 0.5, anchor = 'center')
 
 	# Creating buttons
-	button1 = tk.Button(window, text='PRESENT PREDICTION', font=('Montserrat', 20), borderwidth=0, command = window.destroy)
+	button1 = tk.Button(window, text='PRESENT PREDICTION', font=('Times new roman', 20), borderwidth=0, command = window.destroy)
 	button1.place(relx = 0.76, rely = 0.32, anchor = 'center')
-	button2 = tk.Button(window, text='FUTURE PREDICTION', font=('Montserrat', 20), borderwidth=0, command = window.destroy)
+	button2 = tk.Button(window, text='FUTURE PREDICTION', font=('Times new roman', 20), borderwidth=0, command = window.destroy)
 	button2.place(relx = 0.76, rely = 0.63, anchor = 'center')
 
 	window.mainloop()
-
-prediction()
+	

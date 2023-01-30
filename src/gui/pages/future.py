@@ -33,7 +33,7 @@ def future() -> None:
     canvas.place(relx = 0.5, rely = 0.15, anchor = 'center')
 
     # Creating the title
-    label = tk.Label(window, text='FUTURE DATA PREDICTION', bg='#545454', fg='white', font=('Montserrat', 30))
+    label = tk.Label(window, text='FUTURE DATA PREDICTION', bg='#545454', fg='white', font=('Times new roman', 30))
     label.place(relx = 0.5,rely = 0.1, anchor = 'center')
 
     # Creating radio buttons
@@ -46,7 +46,7 @@ def future() -> None:
     s = ttk.Style()   
     s.configure('style.TRadiobutton',   
         background='#545454',     
-        foreground='black') 
+        foreground='white', font=('Times new roman', 20)) 
 
     # rather than creating each button separately
     x = 1
@@ -56,7 +56,8 @@ def future() -> None:
         x += 1
 
     # Creating button
-    button1 = tk.Button(window, text='    PREDICT    ', font=('Montserrat', 20), borderwidth=0, command = window.destroy)
+    button1 = tk.Button(window, text='    PREDICT    ', font=('Times new roman', 20), borderwidth=0, command = window.destroy)
     button1.place(relx = 0.5, rely = 0.75, anchor = 'center')
 
     window.mainloop()
+    

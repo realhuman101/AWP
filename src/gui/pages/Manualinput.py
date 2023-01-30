@@ -30,32 +30,33 @@ def manual_input() -> None:
     canvas.place(relx = 0.5, rely = 0.15, anchor = 'center')
 
     # Creating the title
-    label = tk.Label(window, text='AUTOMATED FOREST', bg='#545454', fg='white', font=('Montserrat', 30))
+    label = tk.Label(window, text='MANUAL INPUT', bg='#545454', fg='white', font=('Times new roman', 30))
     label.place(relx = 0.5,rely = 0.1, anchor = 'center')
 
     # Creating other text
-    label = tk.Label(window, text='TEMPERATURE (celcius)', bg='#545454', fg='white', font=('Montserrat', 15))
+    label = tk.Label(window, text='TEMPERATURE (celcius)', bg='#545454', fg='white', font=('Times new roman', 15))
     label.place(relx = 0.33,rely = 0.30, anchor = 'center')
-    label = tk.Label(window, text='RELATIVE HUMIDITY (%)', bg='#545454', fg='white', font=('Montserrat', 15))
+    label = tk.Label(window, text='RELATIVE HUMIDITY (%)', bg='#545454', fg='white', font=('Times new roman', 15))
     label.place(relx = 0.66,rely = 0.30, anchor = 'center')
-    label = tk.Label(window, text='WIND SPEED (km/h)', bg='#545454', fg='white', font=('Montserrat', 15))
+    label = tk.Label(window, text='WIND SPEED (km/h)', bg='#545454', fg='white', font=('Times new roman', 15))
     label.place(relx = 0.33,rely = 0.60, anchor = 'center')
-    label = tk.Label(window, text='RAIN (mm)', bg='#545454', fg='white', font=('Montserrat', 15))
+    label = tk.Label(window, text='RAIN (mm)', bg='#545454', fg='white', font=('Times new roman', 15))
     label.place(relx = 0.66,rely = 0.60, anchor = 'center')
 
     # Creating the entry boxes
-    temp = tk.Entry(window, width=20, font=('Montserrat', 20)) 
+    temp = tk.Entry(window, width=20, font=('Times new roman', 20)) 
     temp.place(relx = 0.33, rely = 0.35, anchor = 'center')
-    rh = tk.Entry(window, width=20, font=('Montserrat', 20)) 
+    rh = tk.Entry(window, width=20, font=('Times new roman', 20)) 
     rh.place(relx = 0.66, rely = 0.35, anchor = 'center')
-    ws = tk.Entry(window, width=20, font=('Montserrat', 20)) 
+    ws = tk.Entry(window, width=20, font=('Times new roman', 20)) 
     ws.place(relx = 0.33, rely = 0.65, anchor = 'center')
-    rain = tk.Entry(window, width=20, font=('Montserrat', 20)) 
+    rain = tk.Entry(window, width=20, font=('Times new roman', 20)) 
     rain.place(relx = 0.66, rely = 0.65, anchor = 'center')
     
 
     # Creating buttons
-    button1 = tk.Button(window, text='    PREDICT    ', font=('Montserrat', 20), borderwidth=0, command = window.destroy)
+    button1 = tk.Button(window, text='    PREDICT    ', font=('Times new roman', 20), borderwidth=0, command = window.destroy)
     button1.place(relx = 0.5, rely = 0.9, anchor = 'center')
 
     window.mainloop()
+    
