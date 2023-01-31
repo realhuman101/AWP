@@ -62,7 +62,6 @@ setuptools.setup(
 		"keras>=2.11.0",
 		"scipy>=1.10.0",
 		"pyglet>=2.0.dev18"
-    ]
 	],
 	entry_points={
 		'gui_scripts': [
