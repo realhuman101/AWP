@@ -15,6 +15,7 @@
   - [Installation](#installation)
   - [Usage](#usage)
   - [Datasets](#datasets)
+  - [Model](#model)
   - [Contributing](#contributing)
   - [License](#license)
   - [Credits](#credits)
@@ -44,7 +45,7 @@ For a complete list of requirements, please check our [requirements.txt](require
 
 ## Installation
 
-To install the required packages, run the following command:
+To install the required packages for development, run the following command:
 
 ```py
 pip install -r requirements.txt
@@ -56,9 +57,33 @@ Or, depending on your installation:
 pip3 install -r requirements.txt
 ```
 
+To install the program itself, run the following command:
+
+```shell
+pip install .
+```
+
+Or, depending on your installation:
+
+```shell
+pip3 install .
+```
+
 ## Usage
 
-Project is still **in development** and is therefore unavailable for use.
+> **NOTE:** Project is still **in development** and is therefore unavailable for use. The following instructions are for development purposes only.
+
+First we must install the program, which can be done by following the instructions in the [Installation](#installation) section.
+
+We can then run/start the program by running the following command:
+
+```shell
+affp
+```
+
+A GUI will then appear.
+
+> These instructions are not yet completed, and will be completed upon completion of the project.
 
 ## Datasets
 
@@ -70,6 +95,12 @@ Project is still **in development** and is therefore unavailable for use.
     - Faroudja ABID, fabid@cdta.dz, abidfaroudja@gmail.com, Microelectronic & Nanotechnology Division, Center for Development of Advanced Technologies (CDTA).
   - Relevant Papers:
     - Faroudja ABID et al., Predicting Forest Fire in Algeria using Data Mining Techniques: Case Study of the Decision Tree Algorithm, International Conference on Advanced Intelligent Systems for Sustainable Development (AI2SD 2019) , 08 - 11 July, 2019, Marrakech, Morocco.
+
+## Model
+
+Please visit the [model notebook](src/model/model.ipynb) for more information.  
+
+The model is to predict the likelihood of forest fires using Tensorflow and Keras in Python. The model takes in temperature in Celsius, relative humidity as a percentage, wind speed in Kilometers per hour, and rain size in millimeters as input, and outputs a probability score between 0 and 1 indicating the likelihood of a forest fire. The model is trained on historical forest fire data, optimized using the Adam optimizer, and has an early stopping criterion to prevent overfitting. The model is then saved as a .h5 file for use in the main program.
 
 ## Contributing
 
@@ -105,4 +136,4 @@ We would like to thank the following people and organizations for their support 
 - [Maya Yan](https://github.com/mayahkg) for contributing code and ideas.
 - [CityU EE GEF](https://cityueegef.github.io/) for providing funding, opportunities and resources.
 
-We are grateful for the support of our community and for the contributions of everyone who has helped make this project what it is.
+We are grateful for the support of CityU and for the contributions of everyone who has helped make this project what it is.

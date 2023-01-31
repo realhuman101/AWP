@@ -20,6 +20,7 @@ from .pages.manualInput import manual_input
 from .pages.predictions import prediction
 
 
+
 def start() -> None:
 	# Opening the main window
 	window = tk.Tk()

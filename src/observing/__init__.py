@@ -12,18 +12,4 @@
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 # ======================================================================
 
-import pandas as pd
-import os
-
-dataset: pd.DataFrame = pd.read_csv(
-	os.path.join(
-		os.path.dirname(__file__),
-		"dataset.csv"
-	)
-)
-
-# Removing/Dropping useless columns for the datasets
-dataset = dataset.drop(['year', 'month', 'day', 'FFMC', 'DMC', 'DC', 'ISI', 'BUI', 'FWI'], axis=1)
-
-# Stripping whitespaces from all the data
-dataset.applymap(lambda x: x.strip() if isinstance(x, str) else x)
+from .HKobservatory import currentWeather, futureWeather
