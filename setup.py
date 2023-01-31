@@ -37,15 +37,15 @@ def readme() -> str:
 
 
 setuptools.setup(
-	name='AFFP',
+	name='AWP',
 	version='0.0.0',
-	description='Automated Forest Fire Prediction with AI',
+	description='Automated Wildfire Prediction with AI',
 	author='Valentina Banner, Alicia Yuen, Maya Yan',
 	author_email='valentinavbanner@gmail.com, yuena945@gmail.com, yanm1@kgv.hk',
 	long_description=readme(),
 	long_description_content_type='text/markdown',
-	keywords='AI ML NeuralNetwork fire forest environment tensorflow tkinter',
-	url='https://github.com/realhuman101/AFFP',
+	keywords='AI ML NeuralNetwork fire forest wildfire environment tensorflow tkinter',
+	url='https://github.com/realhuman101/AWP',
 	package_dir={'': 'src'},
 	packages=setuptools.find_packages('src'),
 	include_package_data=True,
@@ -64,7 +64,7 @@ setuptools.setup(
 	],
 	entry_points={
 		'gui_scripts': [
-			'AFFP = gui:start'
+			'AWP = gui:start'
 		]
 	}
 )
