@@ -1,4 +1,4 @@
-# Datasets for the AFFP
+# Datasets for the AWP
 
 This directory contains the dataset used in the project.
 
