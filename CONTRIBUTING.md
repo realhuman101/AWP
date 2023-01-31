@@ -46,7 +46,7 @@ python3 setup.py develop
 To run the program, run the following command:
 
 ```shell
-affp
+AWP
 ```
 
 ## Formatting
