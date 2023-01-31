@@ -25,7 +25,7 @@ def present(window: tk.Tk, width: int, height: int) -> None:
 	canvas.place(relx = 0.5, rely = 0.15, anchor = 'center')
 
 	# Creating the title
-	label = tk.Label(window, text='PRESENT DATA PREDICTION', bg='#545454', fg='white', font=('Times new roman', 30))
+	label = tk.Label(window, text='PRESENT DATA PREDICTION', bg='#545454', fg='white', font=('Montserrat', 30))
 	label.place(relx = 0.5,rely = 0.1, anchor = 'center')
   
 	# Dropdown menu options
@@ -42,11 +42,11 @@ def present(window: tk.Tk, width: int, height: int) -> None:
 	
 	# Create Dropdown menu
 	drop = tk.OptionMenu(window, clicked, *options)
-	drop.config(font=('Times new roman', 20), borderwidth=0, width=20)
+	drop.config(font=('Montserrat', 20), borderwidth=0, width=20)
 	drop.place(relx = 0.5, rely = 0.4, anchor = 'center')
 
 	 # Creating buttons
-	button1 = tk.Button(window, text='    PREDICT    ', font=('Times new roman', 20), borderwidth=0, command = window.destroy)
+	button1 = tk.Button(window, text='    PREDICT    ', font=('Montserrat', 20), borderwidth=0, command = window.destroy)
 	button1.place(relx = 0.5, rely = 0.75, anchor = 'center')
 
 	window.mainloop()

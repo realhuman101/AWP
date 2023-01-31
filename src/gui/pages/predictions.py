@@ -13,8 +13,6 @@
 # ======================================================================
 
 import tkinter as tk
-import pyglet
-import os
 
 from .predictionPages.future import future
 from .predictionPages.present import present
@@ -24,9 +22,6 @@ def prediction(window: tk.Tk, width: int, height: int) -> None:
 	# Setting the background color
 	canvas = tk.Canvas(window, width = width, height = height, bg ='#545454')
 	canvas.place(relx = 0.5, rely = 0.5, anchor = 'center')
-
- 	# Adding the font
-	pyglet.font.add_file(os.getcwd()+'/src/gui/fonts/Montserrat.ttf')
 
 	# Creating the main text
 	label = tk.Label(window, text='AUTOMATED', bg='#545454', fg='white', font=('Montserrat', 30))
