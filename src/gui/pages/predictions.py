@@ -14,6 +14,9 @@
 
 import tkinter as tk
 
+from .predictions.future import future
+from .predictions.present import present
+
 
 def prediction(window: tk.Tk, width: int, height: int) -> None:
 	# Setting the background color
@@ -34,9 +37,9 @@ def prediction(window: tk.Tk, width: int, height: int) -> None:
 	canvas.place(relx = 0.75, rely = 0.5, anchor = 'center')
 
 	# Creating buttons
-	button1 = tk.Button(window, text='PRESENT PREDICTION', font=('Times new roman', 20), borderwidth=0, command = window.destroy)
+	button1 = tk.Button(window, text='PRESENT PREDICTION', font=('Times new roman', 20), borderwidth=0, command=lambda:present(window, width, height))
 	button1.place(relx = 0.76, rely = 0.32, anchor = 'center')
-	button2 = tk.Button(window, text='FUTURE PREDICTION', font=('Times new roman', 20), borderwidth=0, command = window.destroy)
+	button2 = tk.Button(window, text='FUTURE PREDICTION', font=('Times new roman', 20), borderwidth=0, command=lambda:future(window, width, height))
 	button2.place(relx = 0.76, rely = 0.63, anchor = 'center')
 
 	window.mainloop()

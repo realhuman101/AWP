@@ -16,13 +16,7 @@ import tkinter as tk
 from tkinter import ttk
 
 
-def future() -> None:
-    window = tk.Tk()
-    window.title('Future Data Prediction')
-    window.attributes('-fullscreen',True)
-    width = window.winfo_screenwidth()
-    height = window.winfo_screenheight()
-
+def future(window: tk.Tk, width: int, height: int) -> None:
     # Setting the background color
     canvas = tk.Canvas(window, width = width, height = height, bg ='#545454')
     canvas.place(relx = 0.5, rely = 0.5, anchor = 'center')
