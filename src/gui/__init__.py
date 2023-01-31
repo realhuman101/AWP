@@ -13,7 +13,7 @@
 # ======================================================================
 
 import tkinter as tk
-from .pages.Manualinput import manual_input
+from .pages.manualInput import manual_input
 from .pages.predictions import prediction
 
 def start() -> None:
