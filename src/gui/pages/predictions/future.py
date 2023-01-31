@@ -33,7 +33,7 @@ def future(window: tk.Tk, width: int, height: int) -> None:
 	v = tk.StringVar(window, "1")
  
 	# Dictionary to create multiple buttons
-	values = {"1" : "1", "2" : "2", "3" : "3", "4" : "4", "5" : "5", "6" : "6", "7" : "7", "8" : "8", "9" : "9",}
+	values = {str(i):str(i) for i in range(1, 10)} # Max 9 days, 1-9
 	
 	# Creating style element
 	s = ttk.Style()   
