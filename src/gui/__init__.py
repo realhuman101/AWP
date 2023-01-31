@@ -39,9 +39,9 @@ def start() -> None:
     canvas.place(relx = 0.75, rely = 0.5, anchor = 'center')
 
     # Creating buttons
-    button1 = tk.Button(window, text='MANUAL PREDICTION', font=('Times new roman', 20), borderwidth=0, command = window.destroy)
+    button1 = tk.Button(window, text='MANUAL PREDICTION', font=('Times new roman', 20), borderwidth=0, command=manual_input)
     button1.place(relx = 0.76, rely = 0.32, anchor = 'center')
-    button2 = tk.Button(window, text='AUTOMATED PREDICTION', font=('Times new roman', 20), borderwidth=0, command = window.destroy)
+    button2 = tk.Button(window, text='AUTOMATED PREDICTION', font=('Times new roman', 20), borderwidth=0, command=prediction)
     button2.place(relx = 0.76, rely = 0.63, anchor = 'center')
 
     window.mainloop()
