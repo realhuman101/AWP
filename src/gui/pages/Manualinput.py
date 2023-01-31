@@ -11,10 +11,11 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 # ======================================================================
+
 import tkinter as tk
 
-def manual_input() -> None:
 
+def manual_input() -> None:
     window = tk.Tk()
     window.title('Manual Input')
     window.attributes('-fullscreen',True)

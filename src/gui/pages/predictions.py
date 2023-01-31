@@ -13,7 +13,7 @@
 # ======================================================================
 
 import tkinter as tk
-#import pyglet
+
 
 def prediction() -> None:
 	# Opening the main window

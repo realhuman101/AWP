@@ -11,11 +11,12 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 # ======================================================================
+
 import tkinter as tk
 from tkinter import *
 
-def present() -> None:
 
+def present() -> None:
     window = tk.Tk()
     window.title('Present Data')
     window.attributes('-fullscreen',True)

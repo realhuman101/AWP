@@ -11,13 +11,14 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 # ======================================================================
+
 import tkinter as tk
 from tkinter import *
 from tkinter import ttk
 from tkinter.ttk import *
 
-def future() -> None:
 
+def future() -> None:
     window = tk.Tk()
     window.title('Future Data Prediction')
     window.attributes('-fullscreen',True)
