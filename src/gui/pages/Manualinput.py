@@ -15,13 +15,7 @@
 import tkinter as tk
 
 
-def manual_input() -> None:
-    window = tk.Tk()
-    window.title('Manual Input')
-    window.attributes('-fullscreen',True)
-    width = window.winfo_screenwidth()
-    height = window.winfo_screenheight()
-
+def manual_input(window: tk.Tk, width: int, height: int) -> None:
     # Setting the background color
     canvas = tk.Canvas(window, width = width, height = height, bg ='#545454')
     canvas.place(relx = 0.5, rely = 0.5, anchor = 'center')

@@ -15,14 +15,7 @@
 import tkinter as tk
 
 
-def prediction() -> None:
-	# Opening the main window
-	window = tk.Tk()
-	window.title('AWP')
-	window.attributes('-fullscreen',True)
-	width = window.winfo_screenwidth()
-	height = window.winfo_screenheight()
-
+def prediction(window: tk.Tk, width: int, height: int) -> None:
 	# Setting the background color
 	canvas = tk.Canvas(window, width = width, height = height, bg ='#545454')
 	canvas.place(relx = 0.5, rely = 0.5, anchor = 'center')
