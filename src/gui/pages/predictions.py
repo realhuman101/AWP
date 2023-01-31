@@ -43,4 +43,4 @@ def prediction(window: tk.Tk, width: int, height: int) -> None:
 	button2.place(relx = 0.76, rely = 0.63, anchor = 'center')
 
 	window.mainloop()
-	
+
