@@ -28,9 +28,9 @@ def present(window: tk.Tk, width: int, height: int) -> None:
 	label = tk.Label(window, text='PRESENT DATA PREDICTION', bg='#545454', fg='white', font=('Times new roman', 30))
 	label.place(relx = 0.5,rely = 0.1, anchor = 'center')
   
+	# Dropdown menu options
 	REGIONS = ['Cheung Chau', 'Wan Chai', 'Ta Kwu Ling', 'Tai Po Kau', 'Wong Tai Sin', 'Pak Shek Kok', 'Ma On Shan', 'Chek Lap Kok', 'Cheung Sha', 'Central & Western District', 'Pak Tam Chung', 'Yau Tsim Mong', 'Sai Kung Man Yee Road', 'Kwai Tsing', 'Eastern District', 'Nei Kung Uk', 'Lee Kum Kee Family Walk', 'Peng Chau', 'Hong Kong Museum of History', 'Pak Tam Au', 'Sham Shui Po', 'Tuen Mun', 'High Island', 'Shatin Pass', 'Kwun Tong Ferry', 'Happy Valley', 'Man Kam To', 'Kwai Chung', 'Kwun Tong', 'Plover Cove', 'Nam Long Shan', 'Ngong Ping', 'Kowloon City', 'Tai Mei Tuk', 'Mui Wo', 'Wong Chuk Hang', 'Tsing Yi', 'Hong Kong Park', "King's Park", 'Sai Kung Ho Chung', 'Hong Kong Observatory', 'Ho Man Tin', 'Lantau Island', 'Golden Hill', 'Kwai Fong', 'Tai Po', 'Yuen Long', 'Shek Kong', 'Lion Rock', 'Lamma Island', 'Kwun Yam Shan', 'Tseung Kwan O', 'Hang Hau', 'Sai Kung', 'Islands District', 'Sha Tin', 'Pak Kong', 'Lau Fau Shan', 'Southern District', 'North District', 'Tsuen Wan', 'Lo Wu', 'Tai Mo Shan']
 
-	# Dropdown menu options
 	options = [
 		"Chose a reigon:",
 		*REGIONS
