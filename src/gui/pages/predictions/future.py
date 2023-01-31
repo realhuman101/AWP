@@ -13,9 +13,7 @@
 # ======================================================================
 
 import tkinter as tk
-from tkinter import *
 from tkinter import ttk
-from tkinter.ttk import *
 
 
 def future() -> None:
@@ -38,7 +36,7 @@ def future() -> None:
     label.place(relx = 0.5,rely = 0.1, anchor = 'center')
 
     # Creating radio buttons
-    v = StringVar(window, "1")
+    v = tk.StringVar(window, "1")
  
     # Dictionary to create multiple buttons
     values = {"1" : "1", "2" : "2", "3" : "3", "4" : "4", "5" : "5", "6" : "6", "7" : "7", "8" : "8", "9" : "9",}
@@ -52,7 +50,7 @@ def future() -> None:
     # rather than creating each button separately
     x = 1
     for (text, value) in values.items():
-        Radiobutton(window, text = text, variable = v, style='style.TRadiobutton',
+        tk.Radiobutton(window, text = text, variable = v, style='style.TRadiobutton',
             value = value).place(relx = x/10, rely = 0.5, anchor = 'center')
         x += 1
 
