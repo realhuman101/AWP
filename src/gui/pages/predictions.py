@@ -14,8 +14,8 @@
 
 import tkinter as tk
 
-from .predictions.future import future
-from .predictions.present import present
+from .predictionPages.future import future
+from .predictionPages.present import present
 
 
 def prediction(window: tk.Tk, width: int, height: int) -> None:
