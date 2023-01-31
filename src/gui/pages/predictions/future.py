@@ -53,4 +53,3 @@ def future(window: tk.Tk, width: int, height: int) -> None:
 	button1.place(relx = 0.5, rely = 0.75, anchor = 'center')
 
 	window.mainloop()
-	
