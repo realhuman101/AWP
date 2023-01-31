@@ -20,7 +20,6 @@ from keras.models import Model, save_model
 from keras.layers import Input, Dense, Dropout
 from keras.callbacks import EarlyStopping
 from sklearn.model_selection import train_test_split
-import tkinter as tk
 
 from .datasets import dataset
 
@@ -90,5 +89,3 @@ save_model(
     signatures=None,
     options=None
 )
-
-# Precentage
