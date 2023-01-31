@@ -13,7 +13,6 @@
 # ======================================================================
 
 import tkinter as tk
-from tkinter import *
 
 
 def present(window: tk.Tk, width: int, height: int) -> None:
@@ -41,11 +40,11 @@ def present(window: tk.Tk, width: int, height: int) -> None:
 	]
 	
 	# datatype of menu text
-	clicked = StringVar()
+	clicked = tk.StringVar()
 	clicked.set( "Chose a reigon:" )
 	
 	# Create Dropdown menu
-	drop = OptionMenu(window , clicked , *options)
+	drop = tk.OptionMenu(window, clicked, *options)
 	drop.config(font=('Times new roman', 20), borderwidth=0, width=20)
 	drop.place(relx = 0.5, rely = 0.4, anchor = 'center')
 
