@@ -35,8 +35,12 @@ class GUI:
 
 		self.window.mainloop()
 	
+	# Pages
 	from .pages.home import start
 	from .pages.manualInput import manual_input
 	from .pages.predictions import prediction
 	from .pages.predictionPages.future import future
 	from .pages.predictionPages.present import present
+
+	# Widgets
+	from .pages.assets.backbutton import backbutton

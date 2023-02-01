@@ -21,6 +21,9 @@ def future(GUI) -> None:
 	canvas = tk.Canvas(GUI.window, width=GUI.width, height=GUI.height, bg='#545454')
 	canvas.place(relx=0.5, rely=0.5, anchor='center')
 
+	# Adding a backbutton
+	GUI.backbutton(GUI.prediction, 0.05, 0.05)
+
 	# Line
 	canvas = tk.Canvas(GUI.window, width=GUI.width / 5 * 4, height=0.01, bg='#323466')
 	canvas.place(relx=0.5, rely=0.15, anchor='center')
