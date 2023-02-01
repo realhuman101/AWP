@@ -20,5 +20,3 @@ def backbutton(GUI, prev_page: Callable, x: int, y: int, anchor: str = 'center')
 	# Create buttons
 	button = tk.Button(GUI.window, text='← Back', font=('Montserrat', 10), borderwidth=0, command=prev_page)
 	button.place(relx=x, rely=y, anchor=anchor)
-
-	GUI.window.mainloop()
