@@ -31,7 +31,7 @@ class GUI:
 		pyglet.font.add_file(os.getcwd() + '/src/gui/pages/assets/fonts/Montserrat.ttf')
 
 		# Showing homepage
-		self.start(self)
+		self.start()
 
 		self.window.mainloop()
 	
