@@ -13,12 +13,12 @@
 # ======================================================================
 
 import tkinter as tk
+from typing import Callable
 
 
-def backbutton(window: tk.Tk, x: int, y: int, anchor: str = 'center') -> None:
+def backbutton(GUI, prev_page: Callable, x: int, y: int, anchor: str = 'center') -> None:
 	# Create buttons
-	prev_page = eval('')
-	button = tk.Button(window, text='← Back', font=('Montserrat', 10), borderwidth=0, command=prev_page)
+	button = tk.Button(GUI.window, text='← Back', font=('Montserrat', 10), borderwidth=0, command=prev_page)
 	button.place(relx=x, rely=y, anchor=anchor)
 
-	window.mainloop()
+	GUI.window.mainloop()
