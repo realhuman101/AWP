@@ -12,6 +12,8 @@
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 # ======================================================================
 
+from .program import GUI
+
 
 def start() -> None:
-
+	main = GUI()
