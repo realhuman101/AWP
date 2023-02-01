@@ -20,6 +20,9 @@ def prediction(GUI) -> None:
 	canvas = tk.Canvas(GUI.window, width=GUI.width, height=GUI.height, bg='#545454')
 	canvas.place(relx=0.5, rely=0.5, anchor='center')
 
+	# Adding a backbutton
+	GUI.backbutton(GUI.start, 0.05, 0.05)
+
 	# Creating the main text
 	label = tk.Label(GUI.window, text='AUTOMATED', bg='#545454', fg='white', font=('Montserrat', 30))
 	label.place(relx=0.25, rely=0.47, anchor='center')
