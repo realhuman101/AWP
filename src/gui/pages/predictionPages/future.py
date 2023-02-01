@@ -18,12 +18,12 @@ from tkinter import ttk
 
 def future(window: tk.Tk, width: int, height: int) -> None:
 	# Setting the background color
-	canvas = tk.Canvas(window, width=width, height=height, bg='#545454')
-	canvas.place(relx=0.5, rely=0.5, anchor='center')
+	main = tk.Canvas(window, width=width, height=height, bg='#545454')
+	main.place(relx=0.5, rely=0.5, anchor='center')
 
 	# Line
-	canvas = tk.Canvas(window, width=width / 5 * 4, height=0.01, bg='#323466')
-	canvas.place(relx=0.5, rely=0.15, anchor='center')
+	main = tk.Canvas(window, width=width / 5 * 4, height=0.01, bg='#323466')
+	main.place(relx=0.5, rely=0.15, anchor='center')
 
 	# Creating the title
 	label = tk.Label(window, text='FUTURE DATA PREDICTION', bg='#545454', fg='white', font=('Montserrat', 30))
@@ -42,7 +42,7 @@ def future(window: tk.Tk, width: int, height: int) -> None:
 	# Rather than creating each button separately
 	x = 1
 	for (text, value) in values.items():
-		tk.Radiobutton(window, text=text, variable=v, style='style.TRadiobutton', value=value).place(relx=x / 10, rely=0.5, anchor='center')
+		ttk.Radiobutton(window, text=text, variable=v, style='style.TRadiobutton', value=value).place(relx=x / 10, rely=0.5, anchor='center')
 		x += 1
 
 	# Creating button
