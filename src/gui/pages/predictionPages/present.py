@@ -15,17 +15,17 @@
 import tkinter as tk
 
 
-def present(window: tk.Tk, width: int, height: int) -> None:
+def present(GUI) -> None:
 	# Setting the background color
-	canvas = tk.Canvas(window, width=width, height=height, bg='#545454')
+	canvas = tk.Canvas(GUI.window, width=GUI.width, height=GUI.height, bg='#545454')
 	canvas.place(relx=0.5, rely=0.5, anchor='center')
 
 	# Line
-	canvas = tk.Canvas(window, width=width / 5 * 4, height=0.01, bg='#323466')
+	canvas = tk.Canvas(GUI.window, width=GUI.width / 5 * 4, height=0.01, bg='#323466')
 	canvas.place(relx=0.5, rely=0.15, anchor='center')
 
 	# Creating the title
-	label = tk.Label(window, text='PRESENT DATA PREDICTION', bg='#545454', fg='white', font=('Montserrat', 30))
+	label = tk.Label(GUI.window, text='PRESENT DATA PREDICTION', bg='#545454', fg='white', font=('Montserrat', 30))
 	label.place(relx=0.5, rely=0.1, anchor='center')
 
 	# Dropdown menu options
@@ -41,12 +41,12 @@ def present(window: tk.Tk, width: int, height: int) -> None:
 	clicked.set("Chose a reigon:")
 
 	# Create Dropdown menu
-	drop = tk.OptionMenu(window, clicked, *options)
+	drop = tk.OptionMenu(GUI.window, clicked, *options)
 	drop.config(font=('Montserrat', 20), borderwidth=0, width=20)
 	drop.place(relx=0.5, rely=0.4, anchor='center')
 
 	# Creating buttons
-	button1 = tk.Button(window, text='    PREDICT    ', font=('Montserrat', 20), borderwidth=0, command=window.destroy)
+	button1 = tk.Button(GUI.window, text='    PREDICT    ', font=('Montserrat', 20), borderwidth=0, command=GUI.window.destroy)
 	button1.place(relx=0.5, rely=0.75, anchor='center')
 
-	window.mainloop()
+	GUI.window.mainloop()

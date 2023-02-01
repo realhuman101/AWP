@@ -12,8 +12,13 @@
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 # ======================================================================
 
-from .program import GUI
+import tkinter as tk
 
 
-def start() -> None:
-	main = GUI()
+def backbutton(window: tk.Tk, x: int, y: int, anchor: str = 'center') -> None:
+	# Create buttons
+	prev_page = eval('')
+	button = tk.Button(window, text='← Back', font=('Montserrat', 10), borderwidth=0, command=prev_page)
+	button.place(relx=x, rely=y, anchor=anchor)
+
+	window.mainloop()

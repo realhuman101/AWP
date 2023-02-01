@@ -12,8 +12,31 @@
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 # ======================================================================
 
-from .program import GUI
+import tkinter as tk
+import pyglet
+import os
 
 
-def start() -> None:
-	main = GUI()
+class GUI:
+	def __init__(self):
+		# Opening the main window
+		self.window = tk.Tk()
+		self.window.title('AWP')
+		self.window.attributes('-fullscreen', True)
+
+		self.width = self.window.winfo_screenwidth()
+		self.height = self.window.winfo_screenheight()
+
+		# Adding the font
+		pyglet.font.add_file(os.getcwd() + '/src/gui/pages/assets/fonts/Montserrat.ttf')
+
+		# Showing homepage
+		self.start()
+
+		self.window.mainloop()
+	
+	from .pages.home import start
+	from .pages.manualInput import manual_input
+	from .pages.predictions import prediction
+	from .pages.predictionPages.future import future
+	from .pages.predictionPages.present import present
