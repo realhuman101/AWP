@@ -15,8 +15,9 @@
 import tkinter as tk
 
 
-def backbutton(window: tk.Tk, x: int, y: int, prev_page: function, anchor: str = 'center') -> None:
+def backbutton(window: tk.Tk, x: int, y: int, anchor: str = 'center') -> None:
 	# Create buttons
+	prev_page = eval('')
 	button = tk.Button(window, text='← Back', font=('Montserrat', 10), borderwidth=0, command=prev_page)
 	button.place(relx=x, rely=y, anchor=anchor)
 
