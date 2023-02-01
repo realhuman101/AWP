@@ -16,21 +16,21 @@ import tkinter as tk
 from tkinter import ttk
 
 
-def future(window: tk.Tk, width: int, height: int) -> None:
+def future(GUI) -> None:
 	# Setting the background color
-	canvas = tk.Canvas(window, width=width, height=height, bg='#545454')
+	canvas = tk.Canvas(GUI.window, width=GUI.width, height=GUI.height, bg='#545454')
 	canvas.place(relx=0.5, rely=0.5, anchor='center')
 
 	# Line
-	canvas = tk.Canvas(window, width=width / 5 * 4, height=0.01, bg='#323466')
+	canvas = tk.Canvas(GUI.window, width=GUI.width / 5 * 4, height=0.01, bg='#323466')
 	canvas.place(relx=0.5, rely=0.15, anchor='center')
 
 	# Creating the title
-	label = tk.Label(window, text='FUTURE DATA PREDICTION', bg='#545454', fg='white', font=('Montserrat', 30))
+	label = tk.Label(GUI.window, text='FUTURE DATA PREDICTION', bg='#545454', fg='white', font=('Montserrat', 30))
 	label.place(relx=0.5, rely=0.1, anchor='center')
 
 	# Creating radio buttons
-	v = tk.StringVar(window, "1")
+	v = tk.StringVar(GUI.window, "1")
 
 	# Dictionary to create multiple buttons
 	values = {str(i): str(i) for i in range(1, 10)}  # Max 9 days, 1-9
@@ -42,11 +42,11 @@ def future(window: tk.Tk, width: int, height: int) -> None:
 	# Rather than creating each button separately
 	x = 1
 	for (text, value) in values.items():
-		ttk.Radiobutton(window, text=text, variable=v, style='style.TRadiobutton', value=value).place(relx=x / 10, rely=0.5, anchor='center')
+		ttk.Radiobutton(GUI.window, text=text, variable=v, style='style.TRadiobutton', value=value).place(relx=x / 10, rely=0.5, anchor='center')
 		x += 1
 
 	# Creating button
-	button1 = tk.Button(window, text='    PREDICT    ', font=('Montserrat', 20), borderwidth=0, command=window.destroy)
+	button1 = tk.Button(GUI.window, text='    PREDICT    ', font=('Montserrat', 20), borderwidth=0, command=GUI.window.destroy)
 	button1.place(relx=0.5, rely=0.75, anchor='center')
 
-	window.mainloop()
+	GUI.window.mainloop()

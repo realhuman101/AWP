@@ -14,29 +14,26 @@
 
 import tkinter as tk
 
-from .predictionPages.future import future
-from .predictionPages.present import present
 
-
-def prediction(window: tk.Tk, width: int, height: int) -> None:
+def prediction(GUI) -> None:
 	# Setting the background color
-	canvas = tk.Canvas(window, width=width, height=height, bg='#545454')
+	canvas = tk.Canvas(GUI.window, width=GUI.width, height=GUI.height, bg='#545454')
 	canvas.place(relx=0.5, rely=0.5, anchor='center')
 
 	# Creating the main text
-	label = tk.Label(window, text='AUTOMATED', bg='#545454', fg='white', font=('Montserrat', 30))
+	label = tk.Label(GUI.window, text='AUTOMATED', bg='#545454', fg='white', font=('Montserrat', 30))
 	label.place(relx=0.25, rely=0.47, anchor='center')
-	label = tk.Label(window, text='PREDICTIONS', bg='#545454', fg='white', font=('Montserrat', 30))
+	label = tk.Label(GUI.window, text='PREDICTIONS', bg='#545454', fg='white', font=('Montserrat', 30))
 	label.place(relx=0.25, rely=0.53, anchor='center')
 
 	# Creating the Rectangle
-	canvas = tk.Canvas(window, width=width / 2, height=height, bg='#323466')
+	canvas = tk.Canvas(GUI.window, width=GUI.width / 2, height=GUI.height, bg='#323466')
 	canvas.place(relx=0.75, rely=0.5, anchor='center')
 
 	# Creating buttons
-	button1 = tk.Button(window, text='PRESENT PREDICTION', font=('Montserrat', 20), borderwidth=0, command=lambda: present(window, width, height))
+	button1 = tk.Button(GUI.window, text='PRESENT PREDICTION', font=('Montserrat', 20), borderwidth=0, command=GUI.present)
 	button1.place(relx=0.76, rely=0.32, anchor='center')
-	button2 = tk.Button(window, text='FUTURE PREDICTION', font=('Montserrat', 20), borderwidth=0, command=lambda: future(window, width, height))
+	button2 = tk.Button(GUI.window, text='FUTURE PREDICTION', font=('Montserrat', 20), borderwidth=0, command=GUI.future)
 	button2.place(relx=0.76, rely=0.63, anchor='center')
 
-	window.mainloop()
+	GUI.window.mainloop()
