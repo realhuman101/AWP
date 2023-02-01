@@ -18,12 +18,12 @@ from tkinter import ttk
 
 def future(window: tk.Tk, width: int, height: int) -> None:
 	# Setting the background color
-	main = tk.Canvas(window, width=width, height=height, bg='#545454')
-	main.place(relx=0.5, rely=0.5, anchor='center')
+	canvas = tk.Canvas(window, width=width, height=height, bg='#545454')
+	canvas.place(relx=0.5, rely=0.5, anchor='center')
 
 	# Line
-	main = tk.Canvas(window, width=width / 5 * 4, height=0.01, bg='#323466')
-	main.place(relx=0.5, rely=0.15, anchor='center')
+	canvas = tk.Canvas(window, width=width / 5 * 4, height=0.01, bg='#323466')
+	canvas.place(relx=0.5, rely=0.15, anchor='center')
 
 	# Creating the title
 	label = tk.Label(window, text='FUTURE DATA PREDICTION', bg='#545454', fg='white', font=('Montserrat', 30))
