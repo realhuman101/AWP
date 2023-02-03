@@ -16,4 +16,4 @@ from .program import GUI
 
 
 def start() -> None:
-	main = GUI()
+	GUI()

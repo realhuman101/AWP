@@ -34,7 +34,7 @@ class GUI:
 		self.start()
 
 		self.window.mainloop()
-	
+
 	# Pages
 	from .pages.home import start
 	from .pages.manualInput import manual_input
