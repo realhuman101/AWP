@@ -12,10 +12,12 @@
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 # ======================================================================
 
+import pandas as pd
 import requests
-import json
+import math
 import re
 from collections import defaultdict
+
 from .unitConvert import convertWind
 
 
@@ -42,6 +44,20 @@ def accessAPI(dataType: str) -> dict:
 # CURRENT DATA
 
 
+def getCurrentWind(place: str) -> float:
+	csv = pd.read_csv('https://data.weather.gov.hk/weatherAPI/hko_data/regional-weather/latest_10min_wind.csv')
+
+	try:
+		result = csv.loc[csv['Automatic Weather Station'] == place, '10-Minute Mean Speed(km/hour)'].iloc[0]
+	except IndexError:
+		result = csv['10-Minute Mean Speed(km/hour)'].iloc[0]
+
+	if math.isnan(result):
+		result = csv['10-Minute Mean Speed(km/hour)'].iloc[0]
+
+	return result
+
+
 def currentWeather(place: str) -> dict:
 	'''
 	To access current weather data, specifically the temperature (C), humidity (%) and rainfall (mm)
@@ -49,6 +65,7 @@ def currentWeather(place: str) -> dict:
 	- `temperature`: The temperature in degrees Celsius
 	- `humidity`: The humidity in percentage
 	- `rain`: The rainfall in millimetres
+	- `wind`: The wind speed in kilometres per hour
 
 	`place: str` = The place to get the data from
 
@@ -98,6 +115,9 @@ def currentWeather(place: str) -> dict:
 			result['rain'] = rainfall_data[0]['max']
 	except IndexError:
 		result['rain'] = 0
+
+	# Get wind speed
+	result['wind'] = getCurrentWind(place)
 
 	return dict(result)
 

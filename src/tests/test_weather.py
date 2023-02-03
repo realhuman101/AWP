@@ -39,6 +39,7 @@ def test_currentWeather() -> None:
 		assert 50 >= weather['temperature'] >= -20
 		assert 100 >= weather['humidity'] >= 0
 		assert 500 >= weather['rain'] >= 0
+		assert 200 >= weather['wind'] >= 0
 
 
 def test_futureWeather() -> None:
