@@ -14,6 +14,24 @@
 
 import tkinter as tk
 from tkinter import ttk
+from typing import Callable
+
+from ..assets.observing import futureWeather
+
+
+def predict_future(final_output: Callable, days: int) -> None:
+	'''
+	`final_output: Callable` = The function to be called after the prediction is done
+	`days: int` = The number of days to predict
+	'''
+
+	weather = futureWeather()[days]
+	temp = weather['temp']
+	wind = weather['wind']
+	rain = weather['rain']
+	rh = weather['rh']
+
+	final_output(temp, rh, wind, rain)
 
 
 def future(GUI) -> None:
@@ -49,7 +67,7 @@ def future(GUI) -> None:
 		x += 1
 
 	# Creating button
-	button1 = tk.Button(GUI.window, text='    PREDICT    ', font=('Montserrat', 20), borderwidth=0, command=GUI.window.destroy)
+	button1 = tk.Button(GUI.window, text='    PREDICT    ', font=('Montserrat', 20), borderwidth=0, command=lambda: predict_future(GUI.final_output, int(v.get())))
 	button1.place(relx=0.5, rely=0.75, anchor='center')
 
 	GUI.window.mainloop()
