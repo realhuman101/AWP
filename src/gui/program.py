@@ -41,6 +41,7 @@ class GUI:
 	from .pages.predictions import prediction
 	from .pages.predictionPages.future import future
 	from .pages.predictionPages.present import present
+	from .pages.finalOutput import final_output
 
 	# Widgets
 	from .pages.assets.backbutton import backbutton
