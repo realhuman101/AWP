@@ -32,7 +32,7 @@ def manual_input(GUI) -> None:
 	label.place(relx=0.5, rely=0.1, anchor='center')
 
 	# Creating other text
-	label = tk.Label(GUI.window, text='TEMPERATURE (celcius)', bg='#545454', fg='white', font=('Montserrat', 15))
+	label = tk.Label(GUI.window, text='TEMPERATURE (Celcius)', bg='#545454', fg='white', font=('Montserrat', 15))
 	label.place(relx=0.33, rely=0.30, anchor='center')
 	label = tk.Label(GUI.window, text='RELATIVE HUMIDITY (%)', bg='#545454', fg='white', font=('Montserrat', 15))
 	label.place(relx=0.66, rely=0.30, anchor='center')
