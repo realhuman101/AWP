@@ -52,7 +52,7 @@ def manual_input(GUI) -> None:
 	rain.place(relx=0.66, rely=0.65, anchor='center')
 
 	# Creating buttons
-	button1 = tk.Button(GUI.window, text='    PREDICT    ', font=('Montserrat', 20), borderwidth=0, command=GUI.window.destroy)
+	button1 = tk.Button(GUI.window, text='    PREDICT    ', font=('Montserrat', 20), borderwidth=0, command=lambda: GUI.final_output(temp.get(), rh.get(), ws.get(), rain.get()))
 	button1.place(relx=0.5, rely=0.9, anchor='center')
 
 	GUI.window.mainloop()
