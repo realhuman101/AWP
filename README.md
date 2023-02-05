@@ -1,4 +1,4 @@
-# <div align="center">AFFP - Automated Forest Fire Prediction</div>
+# <div align="center">AWP - Automated Wildfire Prediction</div>
 
 <div align="center"><i>AI for a safer, and greener future</i></div>
 
@@ -8,7 +8,7 @@
 
 ## Table of Contents
 
-- [AFFP - Automated Forest Fire Prediction](#affp---automated-forest-fire-prediction)
+- [AWP - Automated Wildfire Prediction](#awp---automated-wildfire-prediction)
   - [Table of Contents](#table-of-contents)
   - [Introduction](#introduction)
   - [Requirements](#requirements)
@@ -24,7 +24,7 @@
 
 ## Introduction
 
-AFFP (Automated Forest Fire Prediction) is a Python-based project that uses machine learning and Tensorflow to predict and prevent forest fires. By analyzing a dataset of historical forest fire data, AFFP is able to identify patterns and trends that can help forecast the likelihood of future fires in a given area. This information can be used to take proactive measures to prevent fires from starting or spreading, and to help emergency responders better allocate their resources.
+AWP (Automated Wildfire Prediction) is a Python-based project that uses machine learning and Tensorflow to predict and prevent wildfires. By analyzing a dataset of historical wildfire data, AWP is able to identify patterns and trends that can help forecast the likelihood of future fires in a given area. This information can be used to take proactive measures to prevent fires from starting or spreading, and to help emergency responders better allocate their resources.
 
 This project is part of the [AIoT Engineering & Entrepreneurial Skills Education for Gifted Students programme](https://cityueegef.github.io/about/).
 
@@ -78,7 +78,7 @@ First we must install the program, which can be done by following the instructio
 We can then run/start the program by running the following command:
 
 ```shell
-affp
+AWP
 ```
 
 A GUI will then appear.

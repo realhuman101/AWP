@@ -30,6 +30,6 @@ jobs:
       - name: Test with pytest
         run: |
           pytest
-      - name: Install AFFP
+      - name: Install AWP
         run: |
           python setup.py develop
