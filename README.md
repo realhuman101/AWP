@@ -4,8 +4,6 @@
 
 ***
 
-> **NOTE:** This project is currently in development and is not ready for use.
-
 ## Table of Contents
 
 - [AWP - Automated Wildfire Prediction](#awp---automated-wildfire-prediction)
@@ -71,8 +69,6 @@ pip3 install .
 
 ## Usage
 
-> **NOTE:** Project is still **in development** and is therefore unavailable for use. The following instructions are for development purposes only.
-
 First we must install the program, which can be done by following the instructions in the [Installation](#installation) section.
 
 We can then run/start the program by running the following command:
@@ -83,7 +79,7 @@ AWP
 
 A GUI will then appear.
 
-> These instructions are not yet completed, and will be completed upon completion of the project.
+> These instructions are not yet completed, and will be completed soon.
 
 ## Datasets
 
