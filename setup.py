@@ -38,7 +38,7 @@ def readme() -> str:
 
 setuptools.setup(
 	name='AWP',
-	version='0.0.0',
+	version='v0.0.1-beta',
 	description='Automated Wildfire Prediction with AI',
 	author='Valentina Banner, Alicia Yuen, Maya Yan',
 	author_email='valentinavbanner@gmail.com, yuena945@gmail.com, yanm1@kgv.hk',
