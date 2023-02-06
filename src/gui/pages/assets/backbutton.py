@@ -12,8 +12,11 @@
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 # ======================================================================
 
-from .program import GUI
+import tkinter as tk
+from typing import Callable
 
 
-def start() -> None:
-	GUI()
+def backbutton(GUI, prev_page: Callable, x: int, y: int, anchor: str = 'center') -> None:
+	# Create buttons
+	button = tk.Button(GUI.window, text='← Back', font=('Montserrat', 10), borderwidth=0, command=prev_page)
+	button.place(relx=x, rely=y, anchor=anchor)

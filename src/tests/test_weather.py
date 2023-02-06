@@ -15,7 +15,7 @@
 import time
 import requests
 
-from ..observing import currentWeather, futureWeather
+from ..gui.pages.assets.observing import currentWeather, futureWeather
 
 
 def test_currentWeather() -> None:
