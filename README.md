@@ -24,6 +24,8 @@
 
 AWP (Automated Wildfire Prediction) is a Python-based project that uses machine learning and Tensorflow to predict and prevent wildfires. By analyzing a dataset of historical wildfire data, AWP is able to identify patterns and trends that can help forecast the likelihood of future fires in a given area. This information can be used to take proactive measures to prevent fires from starting or spreading, and to help emergency responders better allocate their resources.
 
+To view a full demo of this project, please take a look at the [demo video](https://youtu.be/9h0zErdJY9c).
+
 This project is part of the [AIoT Engineering & Entrepreneurial Skills Education for Gifted Students programme](https://cityueegef.github.io/about/).
 
 ## Requirements
