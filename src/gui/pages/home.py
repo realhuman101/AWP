@@ -21,10 +21,12 @@ def start(GUI) -> None:
 	canvas.place(relx=0.5, rely=0.5, anchor='center')
 
 	# Creating the main text
-	label = tk.Label(GUI.window, text='AUTOMATED FOREST', bg='#545454', fg='white', font=('Montserrat', 30))
+	label = tk.Label(GUI.window, text='AUTOMATED', bg='#545454', fg='white', font=('Montserrat', 30))
 	label.place(relx=0.25, rely=0.47, anchor='center')
-	label = tk.Label(GUI.window, text='FIRE PREDICTION', bg='#545454', fg='white', font=('Montserrat', 30))
+	label = tk.Label(GUI.window, text='WILDFIRE', bg='#545454', fg='white', font=('Montserrat', 30))
 	label.place(relx=0.25, rely=0.53, anchor='center')
+	label = tk.Label(GUI.window, text='PREDICTION', bg='#545454', fg='white', font=('Montserrat', 30))
+	label.place(relx=0.25, rely=0.59, anchor='center')
 
 	# Creating the Rectangle
 	canvas = tk.Canvas(GUI.window, width=GUI.width / 2, height=GUI.height, bg='#323466')
