@@ -79,9 +79,8 @@ We can then run/start the program by running the following command:
 AWP
 ```
 
-A GUI will then appear.
-
-> These instructions are not yet completed, and will be completed soon.
+A GUI will then appear. You can use this GUI to interact with the model, predicting with weather data from [the Hong Kong Observatory API](https://www.hko.gov.hk/en/weatherAPI/doc/files/HKO_Open_Data_API_Documentation.pdf) or choose to manually input the data yourself.  
+To view a demo of the GUI itself, you can watch the video [here](https://youtu.be/Q6VV1mRQrMY). 
 
 ## Datasets
 
