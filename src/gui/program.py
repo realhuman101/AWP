@@ -36,6 +36,10 @@ class GUI:
 
 		self.window.mainloop()
 
+	def resize(self):
+		self.width = self.window.winfo_width()
+		self.height = self.window.winfo_height()
+
 	# Pages
 	from .pages.home import start
 	from .pages.predictionPages.manualInput import manual_input
