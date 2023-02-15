@@ -15,7 +15,7 @@
 import tkinter as tk
 
 class RoundedButton(tk.Canvas):
-    def __init__(self, master=None, text:str="", font:tuple[str,int]=("Montserrat",30), radius=25, btnforeground="#000000", btnbackground="#ffffff", bg='#000000', clicked=None, *args, **kwargs):
+    def __init__(self, master=None, text:str="", font:tuple[str,int]=("Montserrat",30), radius=25, btnforeground="#000000", btnbackground="#ffffff", bg='#545454', clicked=None, *args, **kwargs):
         super(RoundedButton, self).__init__(master, *args, **kwargs)
         self.config(bg=bg)
         self.btnbackground = btnbackground
