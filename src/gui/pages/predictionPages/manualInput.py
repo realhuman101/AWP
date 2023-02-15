@@ -13,7 +13,7 @@
 # ======================================================================
 
 import tkinter as tk
-from .assets.roundedbutton import RoundedButton
+from ..assets.roundedbutton import RoundedButton
 
 
 def manual_input(GUI) -> None:

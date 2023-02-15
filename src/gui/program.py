@@ -37,7 +37,7 @@ class GUI:
 
 	# Pages
 	from .pages.home import start
-	from .pages.manualInput import manual_input
+	from .pages.predictionPages.manualInput import manual_input
 	from .pages.predictions import prediction
 	from .pages.predictionPages.future import future
 	from .pages.predictionPages.present import present
