@@ -17,6 +17,8 @@ import numpy as np
 import os
 from keras.models import load_model
 
+from .assets.roundedbutton import RoundedButton
+
 
 def final_output(GUI, temp: int, rh: int, wind: int, rain: int) -> None:
 	# Setting the background color
@@ -44,7 +46,7 @@ def final_output(GUI, temp: int, rh: int, wind: int, rain: int) -> None:
 	label.place(relx=0.5, rely=0.5, anchor='center')
 
 	# Creating buttons
-	button1 = tk.Button(GUI.window, text='    EXIT    ', font=('Montserrat', 20), borderwidth=0, command=GUI.window.destroy)
+	button1 = RoundedButton(GUI.window, text='EXIT', width=150, height=40, font=('Montserrat', 20), clicked=GUI.window.destroy)
 	button1.place(relx=0.5, rely=0.9, anchor='center')
 
 	GUI.window.mainloop()
