@@ -51,8 +51,8 @@ AWP
 
 ## Formatting
 
-Please make sure you follow all the Flake8 formatting rules (besides `W191` and `E501`, and `F401` only if there is a viable reason). You can check this by running the following command:
+Please make sure you follow all the Flake8 formatting rules (besides `W191` and `E501`, `E128`, and `F401` only if there is a viable reason). You can check this by running the following command:
 
 ```shell
-flake8 --ignore=W191,E501,F401
+flake8 --ignore=W191,E501,F401,E128
 ```
