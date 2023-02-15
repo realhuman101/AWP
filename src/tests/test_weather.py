@@ -14,6 +14,7 @@
 
 import time
 import requests
+from urllib.error import URLError
 
 from ..gui.pages.assets.observing import currentWeather, futureWeather
 
@@ -34,6 +35,8 @@ def test_currentWeather() -> None:
 				break
 			except requests.exceptions.ConnectionError:
 				time.sleep(0.01)
+			except URLError: # Timeout by Github Actions
+				break
 
 		# Check if the weather data is within the expected range
 		assert 50 >= weather['temperature'] >= -20
