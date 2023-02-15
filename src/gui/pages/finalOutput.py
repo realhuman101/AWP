@@ -28,7 +28,7 @@ def final_output(GUI, temp: int, rh: int, wind: int, rain: int) -> None:
 	# Load the model & find the percentage
 	new_model = load_model(os.getcwd() + '/src/model/raw/model.h5')
 	prediction = new_model.predict(np.array([[temp, rh, wind, rain]]))
-	percentage =  prediction[0][0]*100
+	percentage = prediction[0][0] * 100
 
 	# Adding a backbutton
 	GUI.backbutton(GUI.start, 0.05, 0.05)
