@@ -22,13 +22,14 @@ class GUI:
 		# Opening the main window
 		self.window = tk.Tk()
 		self.window.title('AWP')
-		self.window.attributes('-fullscreen', True)
 
-		self.width = self.window.winfo_screenwidth()
-		self.height = self.window.winfo_screenheight()
+		self.width = self.window.winfo_width()
+		self.height = self.window.winfo_height()
 
 		# Adding the font
 		pyglet.font.add_file(os.getcwd() + '/src/gui/pages/assets/fonts/Montserrat.ttf')
+
+		self.window.bind("<Configure>", self.resize)
 
 		# Showing homepage
 		self.start()
