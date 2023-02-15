@@ -128,9 +128,9 @@ This project is licensed under the GPL v3 license. See our [LICENSE](LICENSE) fo
 
 We would like to thank the following people and organizations for their support and contributions to this project:
 
-- [Valentina Banner](https://realhuman101.github.io/) for contributing code and ideas.
-- [Alicia Yuen](https://github.com/Alicia1234567891) for contributing code and ideas.
-- [Maya Yan](https://github.com/mayahkg) for contributing code and ideas.
+- [Valentina Banner](https://realhuman101.github.io/) for creating the model, writing tests and assisting with the GUI.
+- [Alicia Yuen](https://github.com/Alicia1234567891) for designing the GUI and helping create and design the project documents.
+- [Maya Yan](https://github.com/mayahkg) for creating the GUI.
 - [CityU EE GEF](https://cityueegef.github.io/) for providing funding, opportunities and resources.
 
-We are grateful for the support of CityU and for the contributions of everyone who has helped make this project what it is.
+We are grateful for the support of the City University of Hong Kong, and for the contributions of everyone who has helped make this project what it is.
