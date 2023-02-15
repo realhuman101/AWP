@@ -37,7 +37,7 @@ def prediction(GUI) -> None:
 	# Creating buttons
 	button1 = RoundedButton(GUI.window, text='PRESENT PREDICTION', width=250, height=45, font=('Montserrat', 20), bg='#323466', clicked=GUI.present)
 	button1.place(relx=0.76, rely=0.32, anchor='center')
-	button2 = RoundedButton(GUI.window, text='FUTURE PREDICTION', width=250, height=45, font=('Montserrat', 20), bg='#323466', clicked=GUI.present)
+	button2 = RoundedButton(GUI.window, text='FUTURE PREDICTION', width=250, height=45, font=('Montserrat', 20), bg='#323466', clicked=GUI.future)
 	button2.place(relx=0.76, rely=0.63, anchor='center')
 
 	GUI.window.mainloop()
