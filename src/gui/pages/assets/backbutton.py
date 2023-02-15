@@ -16,7 +16,7 @@ from typing import Callable
 from .roundedbutton import RoundedButton
 
 
-def backbutton(GUI, prev_page: Callable, x: int, y: int, anchor: str = 'center') -> None:
+def backbutton(GUI, prev_page: Callable, x: int, y: int, anchor: str = 'center', bg: str = '#545454') -> None:
 	# Create buttons
-	button = RoundedButton(GUI.window, text='← Back', width=100, height=40, font=('Montserrat', 15), clicked=prev_page)
+	button = RoundedButton(GUI.window, text='← Back', width=100, height=40, font=('Montserrat', 15), bg=bg, clicked=prev_page)
 	button.place(relx=x, rely=y, anchor=anchor)
