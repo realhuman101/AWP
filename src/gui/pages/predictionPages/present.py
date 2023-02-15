@@ -16,6 +16,7 @@ import tkinter as tk
 from typing import Callable
 
 from ..assets.observing import currentWeather
+from ..assets.roundedbutton import RoundedButton
 
 
 def predict_present(final_output: Callable, place: str) -> None:
@@ -62,7 +63,7 @@ def present(GUI) -> None:
 	drop.place(relx=0.5, rely=0.4, anchor='center')
 
 	# Creating buttons
-	button1 = tk.Button(GUI.window, text='    PREDICT    ', font=('Montserrat', 20), borderwidth=0, command=lambda: predict_present(GUI.final_output, clicked.get()))
+	button1 = RoundedButton(GUI.window, text='PREDICT', width=150, height=40, font=('Montserrat', 20), clicked=lambda: predict_present(GUI.final_output, clicked.get()))
 	button1.place(relx=0.5, rely=0.75, anchor='center')
 
 	GUI.window.mainloop()

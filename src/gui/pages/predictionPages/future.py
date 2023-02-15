@@ -17,6 +17,7 @@ from tkinter import ttk
 from typing import Callable
 
 from ..assets.observing import futureWeather
+from ..assets.roundedbutton import RoundedButton
 
 
 def predict_future(final_output: Callable, days: int) -> None:
@@ -67,7 +68,7 @@ def future(GUI) -> None:
 		x += 1
 
 	# Creating button
-	button1 = tk.Button(GUI.window, text='    PREDICT    ', font=('Montserrat', 20), borderwidth=0, command=lambda: predict_future(GUI.final_output, int(v.get())))
+	button1 = RoundedButton(GUI.window, text='PREDICT', width=150, height=40, font=('Montserrat', 20), clicked=lambda: predict_future(GUI.final_output, int(v.get())))
 	button1.place(relx=0.5, rely=0.75, anchor='center')
 
 	GUI.window.mainloop()

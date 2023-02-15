@@ -13,6 +13,7 @@
 # ======================================================================
 
 import tkinter as tk
+from .assets.roundedbutton import RoundedButton
 
 
 def manual_input(GUI) -> None:
@@ -52,7 +53,7 @@ def manual_input(GUI) -> None:
 	rain.place(relx=0.66, rely=0.65, anchor='center')
 
 	# Creating buttons
-	button1 = tk.Button(GUI.window, text='    PREDICT    ', font=('Montserrat', 20), borderwidth=0, command=lambda: GUI.final_output(float(temp.get()), float(rh.get()), float(ws.get()), float(rain.get())))
+	button1 = RoundedButton(GUI.window, text='PREDICT', width=150, height=40, font=('Montserrat', 20), clicked=lambda: GUI.final_output(float(temp.get()), float(rh.get()), float(ws.get()), float(rain.get())))
 	button1.place(relx=0.5, rely=0.9, anchor='center')
 
 	GUI.window.mainloop()
