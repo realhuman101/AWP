@@ -31,14 +31,14 @@ This project is part of the [AIoT Engineering & Entrepreneurial Skills Education
 ## Requirements
 
 - Python 3.10 to Python 3.10.9
-- Tensorflow 2.10.1 or higher
+- Tensorflow 2.10.0
+- Keras 2.10.0
 - Numpy 1.24.1 or higher
 - Pandas 1.5.2 or higher
 - Requests 2.28.1 or higher
 - Setuptools 63.2.0 or higher
 - Scikit-learn 1.2.1 or higher
 - Scipy 1.10.0 or higher
-- Keras 2.11.0 or higher
 - Matplotlib 3.5.1 or higher
   
 For a complete list of requirements, please check our [requirements.txt](requirements.txt).
