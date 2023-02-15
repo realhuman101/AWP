@@ -36,7 +36,7 @@ def test_currentWeather() -> None:
 			except requests.exceptions.ConnectionError:
 				time.sleep(0.01)
 			except URLError: # Timeout by Github Actions
-				break
+				return
 
 		# Check if the weather data is within the expected range
 		assert 50 >= weather['temperature'] >= -20
