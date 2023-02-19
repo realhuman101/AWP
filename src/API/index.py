@@ -16,12 +16,14 @@ from flask import Flask
 from flask_restful import Api
 
 from endpoints.manual import Manual
+from endpoints.future import Future
 
 app = Flask(__name__)
 api = Api(app)
 
 # Add endpoints
 api.add_resource(Manual, '/manual')
+api.add_resource(Future, '/future')
 
 if __name__ == '__main__':
 	app.run()
