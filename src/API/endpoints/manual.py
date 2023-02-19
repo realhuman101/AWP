@@ -13,7 +13,7 @@
 # ======================================================================
 
 from flask import request
-from flask_restful import Resource, reqparse
+from flask_restful import Resource
 import numpy as np
 import os
 from keras.models import load_model
