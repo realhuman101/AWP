@@ -13,9 +13,15 @@
 # ======================================================================
 
 from flask import Flask
-from flask_restful import Resource, Api, reqparse
-import pandas as pd
-import ast
+from flask_restful import Api
+
+from .endpoints.manual import Manual
 
 app = Flask(__name__)
 api = Api(app)
+
+# Add endpoints
+api.add_resource(Manual, '/manual')
+
+if __name__ == '__main__':
+	app.run()
