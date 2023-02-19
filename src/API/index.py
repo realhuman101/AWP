@@ -17,7 +17,7 @@ from flask_restful import Api
 
 from endpoints.manual import Manual
 from endpoints.future import Future
-from endpoints.future import Present
+from endpoints.present import Present
 
 app = Flask(__name__)
 api = Api(app)
