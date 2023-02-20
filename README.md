@@ -12,6 +12,7 @@
   - [Requirements](#requirements)
   - [Installation](#installation)
   - [Usage](#usage)
+  - [API](#api)
   - [Datasets](#datasets)
   - [Model](#model)
   - [Contributing](#contributing)
@@ -81,6 +82,11 @@ AWP
 
 A GUI will then appear. You can use this GUI to interact with the model, predicting with weather data from [the Hong Kong Observatory API](https://www.hko.gov.hk/en/weatherAPI/doc/files/HKO_Open_Data_API_Documentation.pdf) or choose to manually input the data yourself.  
 To view a demo of the GUI itself, you can watch the video [here](https://youtu.be/Q6VV1mRQrMY). 
+
+## API
+
+We offer an API for developers to use our model in their own projects.  
+The API documentation is currently in development.
 
 ## Datasets
 
