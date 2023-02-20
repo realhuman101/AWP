@@ -41,9 +41,9 @@ class Future(Resource):
 		path = os.getcwd()
 
 		if path.endswith('src/API'):
-			model = load_model(os.getcwd() + '/src/API/assets/model/raw/model.h5')
+			model = load_model(os.getcwd() + '/src/API/assets/model/model.h5')
 		else:
-			model = load_model(os.getcwd() + '/assets/model/raw/model.h5')
+			model = load_model(os.getcwd() + '/assets/model/model.h5')
 
 		prediction = model.predict(data)
 
