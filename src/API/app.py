@@ -27,5 +27,5 @@ api.add_resource(Manual, '/manual')
 api.add_resource(Future, '/future')
 api.add_resource(Present, '/present')
 
-if __name__ == '__main__':
-	app.run(port=3000)
+def run():
+	return app
