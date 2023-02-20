@@ -137,6 +137,3 @@ dmypy.json
 
 # MacOS
 .DS_Store
-
-# Vercel
-.vercel
