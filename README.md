@@ -86,7 +86,7 @@ To view a demo of the GUI itself, you can watch the video [here](https://youtu.b
 ## API
 
 We offer an API for developers to use our model in their own projects.  
-The API documentation is currently in development.
+To view documentation for the API, look [here](docs/API.md).
 
 ## Datasets
 
