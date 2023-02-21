@@ -27,6 +27,8 @@ AWP (Automated Wildfire Prediction) is a Python-based project that uses machine 
 
 To view a full demo of this project, please take a look at the [demo video](https://youtu.be/9h0zErdJY9c).
 
+For more detailed information on the project and how to use it, please visit our [wiki](https://github.com/realhuman101/AWP/wiki).
+
 This project is part of the [AIoT Engineering & Entrepreneurial Skills Education for Gifted Students programme](https://cityueegef.github.io/about/).
 
 ## Requirements
