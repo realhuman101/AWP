@@ -4,11 +4,11 @@ This roadmap outlines the planned future developments for the project. It is a l
 
 ## Next Release
 
-- Beta release
+- Fixed GUI
 
 ## Future Releases
 
-- Completed project
+- Implementation of hardware
 
 ## Unscheduled
 
