@@ -53,7 +53,7 @@ setuptools.setup(
 	license_files=('LICENSE', 'COPYING'),
 	license='GPL v3',
 	install_requires=[
-		"tensorflow==2.10.0",
+		"tensorflow==2.11.1",
 		"keras==2.10.0",
 		"numpy>=1.24.1",
 		"pandas>=1.5.2",
